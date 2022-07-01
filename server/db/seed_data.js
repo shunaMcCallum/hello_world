@@ -1,3 +1,4 @@
+
 use countriesApp;
 db.dropDatabase();
 
@@ -100,3 +101,4 @@ db.countries.insertMany([
         }
     ]
 ])
+
