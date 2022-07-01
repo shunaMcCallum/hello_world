@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://localhost:27017', { useUnifiedTopology: true })
         const db = client.db('countriesApp');
         const bookingsCollection = db.collection('countries');
         const bookingsRouter = createRouter(bookingsCollection);
-        app.use('/api/bookings', bookingsRouter);
+        app.use('/api/countries', bookingsRouter);
     })
     .catch(console.error)
 
