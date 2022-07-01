@@ -1,10 +1,14 @@
 import React from 'react';
 
-const ListItem = () => {
-
+const ListItem = ({ country }) => {
 
     return (
-        <h2>I am the list item</h2>
+        <>
+
+            <img src={country.flags.png} alt={country.name.common} />
+            <h2>{country.name.common}</h2>
+
+        </>
     )
 }
 

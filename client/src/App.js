@@ -4,11 +4,11 @@ import './App.css';
 
 function App() {
   return (
-    //This will render on the app.
-    <div>
-        <h1>Countries</h1>
-        <CountryContainer/>
-    </div>
+    <>
+      <div>
+        <CountryContainer />
+      </div>
+    </>
   );
 }
 
