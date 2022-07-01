@@ -22,7 +22,7 @@ const CountryContainer = () => {
 
         <div>
             <h1> I am the container</h1>
-            {/* <CountryList /> */}
+            <CountryList />
         </div>
     )
 
