@@ -19,11 +19,13 @@ const CountryContainer = () => {
 
 
     return (
+        <>
 
-        <div>
             <h1> I am the container</h1>
             <CountryList />
-        </div>
+
+
+        </>
     )
 
 }
