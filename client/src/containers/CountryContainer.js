@@ -18,6 +18,7 @@ const CountryContainer = ({selectedUser, addCountryStudied, removeCountryStudied
         setSelectedCountry(country);
     };
 
+    
     const handleCountryStudied = (country) => {
         addCountryStudied(country)
     }

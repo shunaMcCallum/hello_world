@@ -2,7 +2,18 @@
 use countriesApp;
 db.dropDatabase();
 
-// add users collection to database!!!
+db.users.insertMany([
+    {
+        "name": "Shuna",
+        "email": "shuna.shuna@shuna.com",
+        "countries_studied": []
+    },
+    {
+        "name": "Sushi",
+        "email": "sushi@meow.com",
+        "countries_studied": []
+    }
+])
 
 db.countries.insertMany([
     {
