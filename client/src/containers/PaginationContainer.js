@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import PaginationDetail from '../components/PaginationDetail.js';
 
-function PaginationContainer() {
+function PaginationContainer({country}) {
 
 
     return (
         <div>
-            <h4>I'm the pagination container!</h4>
-            <PaginationDetail />
+            <h4>{country.name.common}</h4>
+            <PaginationDetail country={country} />
         </div>
     );
 };

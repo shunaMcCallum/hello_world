@@ -1,10 +1,10 @@
 import React from 'react';
 
-function PaginationDetail() {
-    
+function PaginationDetail({ country }) {
+
     return (
         <div>
-            <p>I'm the pagination detail!</p>
+            <p>Capital City: {country.capital}</p>
         </div>
     );
 };
