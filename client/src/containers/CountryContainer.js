@@ -3,7 +3,7 @@ import CountryList from "../components/CountryList";
 import PaginationContainer from './PaginationContainer.js';
 
 
-const CountryContainer = () => {
+const CountryContainer = ({selectedUser, addCountryStudied}) => {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
@@ -17,6 +17,8 @@ const CountryContainer = () => {
     const onCountryClick = (country) => {
         setSelectedCountry(country);
     };
+
+    
 
     return (
         <>

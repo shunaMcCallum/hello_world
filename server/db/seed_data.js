@@ -2,6 +2,8 @@
 use countriesApp;
 db.dropDatabase();
 
+// add users collection to database!!!
+
 db.countries.insertMany([
     {
         "name": {
@@ -524,4 +526,5 @@ db.countries.insertMany([
         },
     }
 ])
+
 
