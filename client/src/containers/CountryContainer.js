@@ -20,7 +20,7 @@ const CountryContainer = () => {
     return (
         <>
             <CountryList countries={countries} onCountryClick={onCountryClick} />
-            <PaginationContainer country={selectedCountry} />
+            {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
         </>
     )
 
