@@ -1,4 +1,96 @@
-.App {
+/* NavBar.js */
+li {
+  float: left;
+  display: block;
+  padding-right: 50px;
+  list-style-type: none;
+}
+
+/* NavBar.js */
+li a {
+  color: #1d1d1db3;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+/* NavBar.js */
+.NavBar a:hover {
+  background-color: #ddd;
+  color: #1D1D1D;
+}
+
+/* NavBar.js */
+.NavBar {
+
+  background-color: white;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-top: 50px;
+  padding-bottom: 70px;
+
+}
+
+.container {
+  text-align: center;
+
+}
+
+
+
+.item {
+  display: inline-block;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 1px;
+  border-color: rgb(237, 235, 235);
+
+}
+
+.flag-image {
+  height: 213px;
+  width: 320px;
+}
+
+.background {
+  background-image: url('./images/cloud_background.jpg');
+  background-size: contain;
+  padding-bottom: 50px;
+
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #1d1d1db3;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #1d1d1db3;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +127,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

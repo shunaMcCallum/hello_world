@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CountryList from "../components/CountryList";
 
-const CountryContainer = () => {
+const Home = () => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
@@ -12,9 +12,16 @@ const CountryContainer = () => {
 
     return (
         <>
-            <CountryList countries={countries} />
+            <div>
+                <h1>Fun with Flags!</h1>
+
+            </div>
+            <div>
+                <CountryList countries={countries} />
+            </div>
+
         </>
     )
 
 }
-export default CountryContainer;
+export default Home;
