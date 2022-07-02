@@ -3,7 +3,7 @@ import CountryList from "../components/CountryList";
 import PaginationContainer from './PaginationContainer.js';
 
 
-const CountryContainer = () => {
+const Home = () => {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
@@ -20,12 +20,15 @@ const CountryContainer = () => {
 
     return (
         <>
-
-            <CountryList countries={countries} onCountryClick={onCountryClick} />
-            {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
-
+            <div>
+                <h1>Fun with Flags!</h1>
+            </div>
+            <div>
+                <CountryList countries={countries} onCountryClick={onCountryClick} />
+                {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
+            </div>
         </>
     )
-
 }
-export default CountryContainer;
+
+export default Home;

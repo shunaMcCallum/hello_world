@@ -11,10 +11,10 @@ const ListItem = ({ country, onCountryClick }) => {
 
     return (
         <>
-
-            <img src={country.flags.png} alt={country.name.common} onClick={handleClick} />
-            <h2 onClick={handleClick}>{country.name.common}</h2>
-
+            <div className='item'>
+                <img className='flag-image' src={country.flags.png} alt={country.name.common} />
+                <h2 className='homepage-h2'>{country.name.common}</h2>
+            </div>
         </>
     )
 }
