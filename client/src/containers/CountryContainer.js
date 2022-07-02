@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CountryList from "../components/CountryList";
 import PaginationContainer from './PaginationContainer.js';
 
+
 const CountryContainer = () => {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
@@ -19,8 +20,10 @@ const CountryContainer = () => {
 
     return (
         <>
+
             <CountryList countries={countries} onCountryClick={onCountryClick} />
             {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
+
         </>
     )
 
