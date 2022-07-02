@@ -23,6 +23,7 @@ const UserService = {
             body: JSON.stringify(payload),
             headers: { 'Content-Type': 'application/json' }
         })
+            // .then(res => res.json());
     },
 
     // deleteUser(id) {

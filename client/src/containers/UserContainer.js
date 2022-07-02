@@ -44,8 +44,7 @@ const UserContainer = () => {
 
     return (
         <div>
-            <UserSelect users={users} onUserSelect={onUserSelect} />
-            {selectedUser ? <CountryContainer selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : null}
+            {selectedUser ? <CountryContainer selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : <UserSelect users={users} onUserSelect={onUserSelect} />}
         </div>
     )
 }
