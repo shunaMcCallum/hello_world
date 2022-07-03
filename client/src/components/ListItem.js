@@ -38,18 +38,18 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
     // the code below says "if a country has been studied, display the first div - if a country has NOT been studied, display the second div"
     <>
       {checkIfCountryStudied() ?
-        <>
-          <img src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
-          <h1 onClick={handleCountryClick}>{country.name.common}</h1>
+        <div className='item'>
+          <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
+          <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
           <p>STUDIED</p>
           <button onClick={handleRemoveStudiedClick}>Remove from my Studied List</button>
-        </> :
+        </div> :
 
-        <>
+        <div>
           <img src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
           <h3 onClick={handleCountryClick}>{country.name.common}</h3>
           <button onClick={handleStudiedClick}>Add to my Studied List</button>
-        </>
+        </div>
       }
     </>
   )

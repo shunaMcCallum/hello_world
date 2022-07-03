@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import UserSelect from '../components/UserSelect';
-import CountryContainer from './CountryContainer';
+import Home from './Home';
 import UserService from '../services/UserService';
 
 // user container renders first on web page - once user has been selected, the country container renders
@@ -44,7 +44,7 @@ const UserContainer = () => {
 
     return (
         <div>
-            {selectedUser ? <CountryContainer selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : <UserSelect users={users} onUserSelect={onUserSelect} />}
+            {selectedUser ? <Home selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : <UserSelect users={users} onUserSelect={onUserSelect} />}
         </div>
     )
 }
