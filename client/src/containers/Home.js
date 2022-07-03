@@ -3,7 +3,7 @@ import CountryList from "../components/CountryList";
 import PaginationContainer from './PaginationContainer.js';
 
 
-const Home = () => {
+const Home = ({ selectedUser, addCountryStudied, removeCountryStudied }) => {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
@@ -18,16 +18,24 @@ const Home = () => {
         setSelectedCountry(country);
     };
 
+
+    const handleCountryStudied = (country) => {
+        addCountryStudied(country)
+    }
+
+    const handleRemoveCountryStudied = (country) => {
+        removeCountryStudied(country)
+    }
+
     return (
-        <>
+        <div>
             <div>
                 <h1>Fun with Flags!</h1>
             </div>
-            <div>
-                <CountryList countries={countries} onCountryClick={onCountryClick} />
-                {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
-            </div>
-        </>
+            <h1>{selectedUser.name}'s Page</h1>
+            <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} selectedUser={selectedUser} />
+            {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
+        </ div>
     )
 }
 
