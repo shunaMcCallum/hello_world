@@ -89,6 +89,7 @@ header {
   background-image: url('./images/cloud_background.jpg');
   background-size: contain;
   padding-bottom: 50px;
+  min-height: 1326.690px;
 }
 
 h1 {
@@ -120,6 +121,9 @@ h2 {
   padding: 3px
 }
 
+.select-button {
+  padding: 200px;
+}
 
 
 
