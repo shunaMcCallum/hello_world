@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CountryList from "../components/CountryList";
 import PaginationContainer from './PaginationContainer.js';
+import { Link } from "react-router-dom";
 
 
 const Home = ({ selectedUser, addCountryStudied, removeCountryStudied }) => {
@@ -33,6 +34,7 @@ const Home = ({ selectedUser, addCountryStudied, removeCountryStudied }) => {
                 <h1>Fun with Flags!</h1>
             </div>
             <h1>{selectedUser.name}'s Page</h1>
+            <button><Link to="/" >Logout</Link></button>
             <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} selectedUser={selectedUser} />
             {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
         </ div>
