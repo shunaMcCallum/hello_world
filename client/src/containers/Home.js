@@ -28,14 +28,20 @@ const Home = ({ selectedUser, addCountryStudied, removeCountryStudied }) => {
     }
 
     return (
-        <div>
+        <>
+            <header>
+                <h1 className="airways">
+                    Hello, World!
+                </h1>
+            </header>
             <div>
-                <h1>Fun with Flags!</h1>
-            </div>
-            <h1>{selectedUser.name}'s Page</h1>
-            <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} selectedUser={selectedUser} />
-            {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
-        </ div>
+                <div>
+                    <h1 className="user-name">{selectedUser.name}'s Page!</h1>
+                </div>
+                <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} selectedUser={selectedUser} />
+                {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
+            </ div>
+        </>
     )
 }
 
