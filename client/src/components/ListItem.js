@@ -26,9 +26,9 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
     for (let i = 0; i < selectedUser.countries_studied.length; i++) {
       if (selectedUser.countries_studied[i].name.common === country.name.common) {
         return true;
-      } 
+      }
     }
-    
+
   }
 
 
@@ -45,11 +45,11 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
         </div> :
 
         <div className='item'>
-        <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
-        <h3 onClick={handleCountryClick}>{country.name.common}</h3>
-        <button onClick={handleStudiedClick}>Add to my Studied List</button>
+          <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
+          <h3 onClick={handleCountryClick}>{country.name.common}</h3>
+          <button className='studied-list-button' onClick={handleStudiedClick}>Add to my Studied List</button>
         </div>
-      } 
+      }
     </>
   )
 }
