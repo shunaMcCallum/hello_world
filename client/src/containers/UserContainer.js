@@ -51,9 +51,13 @@ const UserContainer = () => {
     }
 
     return (
-        <div>
-            {selectedUser ? <Home selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : <UserSelect users={users} onUserSelect={onUserSelect} />}
-        </div>
+        <>
+
+            <div>
+                {selectedUser ? <Home selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : <UserSelect users={users} onUserSelect={onUserSelect} />}
+            </div>
+
+        </>
     )
 }
 
