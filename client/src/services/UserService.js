@@ -17,7 +17,6 @@ const UserService = {
     // },
 
     putUser(id, payload) {
-        console.log(payload)
         return fetch(baseURL + id, {
             method: 'PUT',
             body: JSON.stringify(payload),
