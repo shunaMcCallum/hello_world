@@ -60,6 +60,7 @@ import React, {useState} from 'react';
 		}
 	};
 	return (
+		
 		<div className='quizapp'>
 			{showScore ? (
 				<div className='score-section'>
