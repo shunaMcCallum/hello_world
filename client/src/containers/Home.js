@@ -51,7 +51,6 @@ const Home = () => {
     return (
         <div>
             <div>
-
                 <h1>Fun with Flags!</h1>
 
                 <div>
@@ -62,9 +61,6 @@ const Home = () => {
                 {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
 
             </div>
-            <h1>{selectedUser.name}'s Page</h1>
-            <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} selectedUser={selectedUser} />
-            {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
         </ div>
     )
 }

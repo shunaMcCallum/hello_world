@@ -24,11 +24,11 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
   // country is displayed in the browser - countries that have been studied will display differently to those that have not been studied
   const checkIfCountryStudied = () => {
 
-    for (let item of selectedUser.countries_studied) {
-      if (item.name.common !== country.name.common) {
-        return false
-      } else {
-        return true
+    // for (let item of user.countries_studied) {
+    //   if (item.name.common !== country.name.common) {
+    //     return false
+    //   } else {
+    //     return true
 
     for (let i = 0; i < user.countries_studied.length; i++) {
       if (user.countries_studied[i].name.common === country.name.common) {
