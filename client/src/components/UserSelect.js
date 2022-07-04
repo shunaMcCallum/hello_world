@@ -1,7 +1,7 @@
 import React from 'react';
 
-const UserSelect = ({ users, onUserSelect }) => {
-
+const UserSelect = ({users, onUserSelect}) => {
+  
     const handleSelect = (event) => {
         const chosenIndex = event.target.value;
         const chosenUser = users[chosenIndex];
@@ -13,21 +13,10 @@ const UserSelect = ({ users, onUserSelect }) => {
     })
 
     return (
-        <>
-            <header>
-                <h1 className="airways">
-                    Hello, World!
-                </h1>
-            </header>
-
-            <div className='select-button'>
-                <select onChange={handleSelect}>
-                    <option selected disabled value="">Select a User</option>
-                    {userItems}
-                </select>
-            </div>
-
-        </>
+        <select onChange={handleSelect}>
+            <option selected disabled value="">Select a User</option>
+            {userItems}
+        </select>
     )
 }
 

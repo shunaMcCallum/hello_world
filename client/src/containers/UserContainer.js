@@ -27,11 +27,7 @@ const UserContainer = () => {
     // this function adds the country to a list of countries studied in the user's account so they can track what they've studied
     const addCountryStudied = (country) => {
         selectedUser.countries_studied.push(country)
-        UserService.putUser(selectedUser._id, { countries_studied: selectedUser.countries_studied })
-        UserService.getUsers()
-            .then((data) => {
-                setUsers(data)
-            });
+        UserService.putUser(selectedUser._id, { countries_studied: selectedUser.countries_studied });
     }
 
     // this function does the opposite of the above - another button renders allowing the user to remove a country from their studied list
@@ -44,20 +40,12 @@ const UserContainer = () => {
         }
         selectedUser.countries_studied = array;
         UserService.putUser(selectedUser._id, { countries_studied: selectedUser.countries_studied });
-        UserService.getUsers()
-            .then((data) => {
-                setUsers(data)
-            });
     }
 
     return (
-        <>
-
-            <div>
-                {selectedUser ? <Home selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : <UserSelect users={users} onUserSelect={onUserSelect} />}
-            </div>
-
-        </>
+        <div>
+            {selectedUser ? <Home selectedUser={selectedUser} addCountryStudied={addCountryStudied} removeCountryStudied={removeCountryStudied} /> : <UserSelect users={users} onUserSelect={onUserSelect} />}
+        </div>
     )
 }
 
