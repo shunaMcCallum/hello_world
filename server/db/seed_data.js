@@ -6,11 +6,6 @@ db.users.insertMany([
         "name": "Shuna",
         "email": "shuna.shuna@shuna.com",
         "countries_studied": []
-    },
-    {
-        "name": "Sushi",
-        "email": "sushi@meow.com",
-        "countries_studied": []
     }
 ])
 
