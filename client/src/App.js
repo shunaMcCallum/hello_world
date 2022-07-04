@@ -5,6 +5,8 @@ import NavBar from "./components/NavBar";
 import QuizComponent from "./components/QuizComponent";
 import './Quiz.css';
 import './App.css';
+import Map from "./map.js";
+
 
 function App() {
 
@@ -24,7 +26,8 @@ function App() {
             <NavBar />
             <Routes>
               <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />
-              <Route path="/Quiz" element={<QuizComponent/>} />
+              <Route path="/Quiz" element={<QuizComponent />} />
+              <Route path="/map" element={<Map />} />
             </Routes>
           </Router>
           {/* <QuizComponent/> */}
