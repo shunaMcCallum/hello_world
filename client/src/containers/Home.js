@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CountryList from "../components/CountryList";
 import PaginationContainer from './PaginationContainer.js';
 import UserService from '../services/UserService';
+import NavBar from "../components/NavBar";
 
 
 const Home = ({ user, setUsers }) => {
@@ -61,11 +62,16 @@ const Home = ({ user, setUsers }) => {
         getCountries()
     }
 
+    const handleClick = () => {
+        window.location.reload();
+    }
+
     return (
         <div>
             <div>
                 <h1>Fun with Flags!</h1>
             </div>
+            <NavBar handleClick={handleClick} />
             {selectedCountry ? <PaginationContainer country={selectedCountry} pageLimit={5} /> :
             <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
         </div>

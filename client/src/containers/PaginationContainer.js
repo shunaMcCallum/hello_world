@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PaginationDetail from '../components/PaginationDetail.js';
 
-function PaginationContainer({ country, title, pageLimit }) {
+function PaginationContainer({ country, pageLimit }) {
     // state added here to track which page is being viewed and therefore what data to render
     // currentPage starts at 1 to render Page 1 by default
     const [currentPage, setCurrentPage] = useState(1);
