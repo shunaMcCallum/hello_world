@@ -66,7 +66,7 @@ const Home = ({ user, setUsers }) => {
             <div>
                 <h1>Fun with Flags!</h1>
             </div>
-            {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> :
+            {selectedCountry ? <PaginationContainer country={selectedCountry} pageLimit={5} /> :
             <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
         </div>
     )

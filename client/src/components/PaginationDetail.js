@@ -84,6 +84,7 @@ function PaginationDetail({ country, currentPage }) {
         <div>
             {/* the seleced country's name is displayed and the required data on that country is rendered using getPaginatedData */}
             <h1>{country.name.common}</h1>
+            <img src={country.flags.png} alt={country.name.common} />
             {getPaginatedData()}
         </div>
     );

@@ -40,7 +40,6 @@ function PaginationContainer({ country, title, pageLimit }) {
 
     return (
         <div>
-            <h1>{title}</h1>
             {/* PaginationDetail renders the specific country data we want to display on each page of the Pagination component
             the selected country is passed down as props so that it's data can be accessed
             the currentPage state is passed down as props so this can be matched with the data to be rendered on each page of the Pagination component */}
