@@ -23,7 +23,9 @@ function App() {
           <Router>
             <NavBar />
             <Routes>
+
               <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />
+
               <Route path="/Quiz" element={<QuizComponent/>} />
             </Routes>
           </Router>
@@ -35,3 +37,5 @@ function App() {
 }
 
 export default App;
+
+
