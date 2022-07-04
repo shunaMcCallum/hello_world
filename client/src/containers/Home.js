@@ -68,10 +68,10 @@ const Home = ({ user, setUsers }) => {
 
     return (
         <div>
+            <NavBar handleClick={handleClick} />
             <div>
                 <h1>Fun with Flags!</h1>
             </div>
-            <NavBar handleClick={handleClick} />
             {selectedCountry ? <PaginationContainer country={selectedCountry} pageLimit={5} /> :
             <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
         </div>

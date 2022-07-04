@@ -10,7 +10,7 @@ function PaginationDetail({ country, currentPage }) {
                 <p>{country.name.common}'s official name is {country.name.official}</p>
                 <p>It has a population of {country.population} people.</p>
                 <p>The capital city is {country.capital}.</p>
-                <img src={country.name.img} />
+                <img className="pagination-image" src={country.name.img} />
             </>
         )
     };
@@ -29,7 +29,6 @@ function PaginationDetail({ country, currentPage }) {
         return (
             <>
                 <h2>Flag</h2>
-                <img src={country.flags.png} />
                 <p>{country.flags.meaning}</p>
             </>
         )
@@ -41,9 +40,9 @@ function PaginationDetail({ country, currentPage }) {
                 <h2>Landmarks</h2>
                 <p>{country.name.common}'s most famous landmarks include:</p>
                 <p>{country.landmarks[0].name}</p>
-                <img src={country.landmarks[0].img} />
+                <img className="pagination-image" src={country.landmarks[0].img} />
                 <p>{country.landmarks[1].name}</p>
-                <img src={country.landmarks[1].img} />
+                <img className="pagination-image" src={country.landmarks[1].img} />
             </>
         )
     };
@@ -54,7 +53,7 @@ function PaginationDetail({ country, currentPage }) {
                 <h2>Fun Fact</h2>
                 <h4>{country.funFact.header}</h4>
                 <p>{country.funFact.fact}</p>
-                <img src={country.funFact.img} />
+                <img className="pagination-image" src={country.funFact.img} />
             </>
         )
     };
@@ -84,7 +83,7 @@ function PaginationDetail({ country, currentPage }) {
         <div>
             {/* the seleced country's name is displayed and the required data on that country is rendered using getPaginatedData */}
             <h1>{country.name.common}</h1>
-            <img src={country.flags.png} alt={country.name.common} />
+            <img className="flag-image" src={country.flags.png} alt={country.name.common} />
             {getPaginatedData()}
         </div>
     );

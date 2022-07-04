@@ -154,3 +154,34 @@ h2 {
 .select-button {
   padding: 200px;
 }
+
+/* paginationdetail.js */
+.pagination-image {
+  height: 400px;
+  width: 400px;
+  margin-bottom: 50px;
+}
+
+.buttons {
+  display: flex;
+  margin-left: 39.5%;
+  margin-right: 50%;
+}
+
+.pagination-button {
+  display: flex;
+  padding: 3px;
+  
+}
+
+#button-detail {
+  width: auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  /* background-color: rgb(236, 234, 234); */
+  /* border-radius: 7px; */
+  /* border-style: solid; */
+  /* border-color: rgb(236, 234, 234); */
+  padding: 3px;
+  /* color: #1D1D1D; */
+}

@@ -46,20 +46,22 @@ function PaginationContainer({ country, pageLimit }) {
             <div>
                 <PaginationDetail country={country} currentPage={currentPage} />
             </div>
-            <div>
+            <div className="buttons">
+            <div className="pagination-button">
                 {/* previous button - triggers the goToPreviousPage function when clicked */}
-                <button onClick={goToPreviousPage}>prev</button>
+                <button id="button-detail" onClick={goToPreviousPage}>prev</button>
             </div>
-            <div>
+            <div className="pagination-button">
                 {/* numbered navigation buttons - each button triggers the changePage button when clicked
                 the getPaginationGroup function is run here to determine which numbers are displayed on the buttons */}
                 {getPaginationGroup().map((item, index) => (
-                    <button key={index} onClick={changePage}><span>{item}</span></button>
+                    <button id="button-detail" key={index} onClick={changePage}><span>{item}</span></button>
                 ))}
             </div>
-            <div>
+            <div className="pagination-button">
                 {/* next button - triggers the goToNextPage function when clicked */}
-                <button onClick={goToNextPage}>next</button>
+                <button id="button-detail"  onClick={goToNextPage}>next</button>
+                </div>
             </div>
         </div>
     );
