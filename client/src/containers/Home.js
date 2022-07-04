@@ -65,12 +65,7 @@ const Home = ({ user, setUsers }) => {
         <div>
             <div>
                 <h1>Fun with Flags!</h1>
-                {console.log(user)}
-                {console.log(countries)}
-                <div>
-                    {/* <h1 className="user-name">{user.name}'s Page!</h1> */}
-                    {/* <button><Link to="/" >Logout</Link></button> */}
-                </div>
+            </div>
                 <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />
                 {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
 
