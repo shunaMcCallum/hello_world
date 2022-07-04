@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveCountryStudied, selectedUser }) => {
+const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveCountryStudied, user }) => {
 
   // function for handling what happens when list item is clicked
   // this will run the onCountry Click function, which sets the selectedCountry state in CountriesContainer
@@ -23,12 +23,19 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
   // function checks whether this country is included in the user's countries_studied list, and in the return below it determines how the
   // country is displayed in the browser - countries that have been studied will display differently to those that have not been studied
   const checkIfCountryStudied = () => {
-    for (let i = 0; i < selectedUser.countries_studied.length; i++) {
-      if (selectedUser.countries_studied[i].name.common === country.name.common) {
+
+    // for (let item of user.countries_studied) {
+    //   if (item.name.common !== country.name.common) {
+    //     return false
+    //   } else {
+    //     return true
+
+    for (let i = 0; i < user.countries_studied.length; i++) {
+      if (user.countries_studied[i].name.common === country.name.common) {
         return true;
+
       }
     }
-
   }
 
 
@@ -37,7 +44,7 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
     // the code below says "if a country has been studied, display the first div - if a country has NOT been studied, display the second div"
     <>
       {checkIfCountryStudied() ?
-        <div className='item'>
+        <div >
           <img src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
           <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
           <p>STUDIED</p>
@@ -46,8 +53,8 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
 
         <div className='item'>
           <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
-          <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
-          <button className='studied-list-button' onClick={handleStudiedClick}>Add to my Studied List</button>
+          <h3 onClick={handleCountryClick}>{country.name.common}</h3>
+          <button onClick={handleStudiedClick}>Add to my Studied List</button>
         </div>
       }
     </>
