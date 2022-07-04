@@ -5,8 +5,13 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
 
+
         <>
+
+
             <div className="NavBar">
+
+
                 <ul>
                     <li>
                         <Link to="/">Home</Link>
@@ -15,8 +20,16 @@ const NavBar = () => {
                     <li>
                         <Link to="/Quiz">Quiz</Link>
                     </li>
-
                 </ul>
+            </div>
+
+            <div>
+
+                <header>
+                    <h1 className="airways">
+                        Hello, World!
+                    </h1>
+                </header>
             </div>
         </>
     )

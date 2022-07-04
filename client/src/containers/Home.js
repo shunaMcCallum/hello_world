@@ -51,7 +51,6 @@ const Home = () => {
     return (
         <div>
             <div>
-                <h1>Fun with Flags!</h1>
 
                 <div>
                     <h1 className="user-name">{user.name}'s Page!</h1>
