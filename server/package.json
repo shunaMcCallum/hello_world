@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server:dev": "nodemon server.js",
-    "seeds": "mondo < .db/seed_data.js"
+    "seeds": "mongo < ./db/seed_data.js"
   },
   "author": "",
   "keywords": [],

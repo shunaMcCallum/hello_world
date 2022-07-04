@@ -1,14 +1,28 @@
 import React from 'react';
-import CountryContainer from './containers/CountryContainer';
+import Home from './containers/Home';
+import UserContainer from './containers/UserContainer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import QuizComponent from "./components/QuizComponent";
+import './Quiz.css';
 import './App.css';
 
 function App() {
   return (
-    //This will render on the app.
-    <div>
-        <h1>Countries</h1>
-        <CountryContainer/>
-    </div>
+    <>
+      <div className="container">
+        <div className="background">
+          <Router>
+            <NavBar />
+            <Routes>
+              <Route exact path="/" element={< UserContainer />} />
+              <Route path="/Quiz" element={<QuizComponent/>} />
+            </Routes>
+          </Router>
+          {/* <QuizComponent/> */}
+        </div>
+      </div>
+    </>
   );
 }
 
