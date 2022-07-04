@@ -1,15 +1,8 @@
-@font-face {
-  font-family: "airways";
-  /*Can be any text*/
-  src: url("./fonts/Airways_PERSONAL_USE_ONLY.ttf") format("truetype");
-}
-
 /* NavBar.js */
 li {
   float: left;
   display: block;
   padding-right: 50px;
-  padding-top: 10px;
   list-style-type: none;
 }
 
@@ -19,11 +12,6 @@ li a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  border-style: solid;
-  border-radius: 100px;
-  border-color: rgb(236, 234, 234);
-  padding: 10px;
-  background-color: rgb(236, 234, 234);
 }
 
 /* NavBar.js */
@@ -34,37 +22,25 @@ li a {
 
 /* NavBar.js */
 .NavBar {
+
   background-color: white;
   text-align: left;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
   letter-spacing: 1px;
-  /* padding-top: 50px; */
-  /* padding-bottom: 70px;
-  border-radius: 0 0 85% 85% / 30%; */
+  padding-top: 50px;
+  padding-bottom: 70px;
+
 }
 
-/* home.js */
-header {
-  background-color: white;
-  padding: 10px;
-  border-radius: 0 0 85% 85% / 30%;
-}
-
-/* home.js */
-.airways {
-  font-family: airways;
-  color: #1D1D1Db3;
-  font-size: 70px;
-}
-
-/* app.js */
 .container {
   text-align: center;
+
 }
 
-/* listitem.js */
+
+
 .item {
   display: inline-block;
   background-color: white;
@@ -76,20 +52,19 @@ header {
   border-style: solid;
   border-radius: 1px;
   border-color: rgb(237, 235, 235);
+
 }
 
-/* listitem.js */
 .flag-image {
   height: 213px;
   width: 320px;
 }
 
-/* app.js */
 .background {
   background-image: url('./images/cloud_background.jpg');
   background-size: contain;
   padding-bottom: 50px;
-  min-height: 1326.690px;
+
 }
 
 h1 {
@@ -103,27 +78,8 @@ h2 {
   font-weight: bold;
 }
 
-/* home.js */
-.user-name {
-  font-family: airways;
-  text-align: left;
-  padding-left: 100px;
-  font-size: 40px;
-  color: #1d1d1db3;
-}
 
-/* listitem.js */
-.studied-list-button {
-  background-color: rgb(236, 234, 234);
-  border-radius: 7px;
-  border-style: solid;
-  border-color: rgb(236, 234, 234);
-  padding: 3px
-}
 
-.select-button {
-  padding: 200px;
-}
 
 
 
