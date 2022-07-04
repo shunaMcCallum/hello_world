@@ -5,7 +5,7 @@ import UserService from '../services/UserService';
 import NavBar from "../components/NavBar";
 
 
-const Home = ({ user, setUsers }) => {
+const Home = ({ user, toggleBackground }) => {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
@@ -66,9 +66,14 @@ const Home = ({ user, setUsers }) => {
         window.location.reload();
     }
 
+    const stopBackground = () => {
+        toggleBackground();
+    }
+
     return (
         <div>
             <NavBar handleClick={handleClick} />
+            {/* <button onClick={stopBackground}>Stop Moving Background</button> */}
             <div>
                 <h1>Fun with Flags!</h1>
             </div>

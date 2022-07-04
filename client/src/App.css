@@ -105,6 +105,12 @@ header {
   animation: wind 20s linear infinite;
 }
 
+#cloud-intro-stop {
+  position: relative;
+  height: 100%;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+}
+
 @keyframes wind {
   0% {
     background-position: 0 200px, 0 300px, 100px 250px;
@@ -141,6 +147,17 @@ h2 {
   color: #1d1d1db3;
 }
 
+.background-button {
+  background-color: rgb(236, 234, 234);
+  border-radius: 7px;
+  border-style: solid;
+  border-color: rgb(236, 234, 234);
+  padding: 3px;
+  color: #1D1D1D;
+  width: auto;
+  margin: 10px;
+}
+
 /* listitem.js */
 .studied-list-button {
   background-color: rgb(236, 234, 234);
@@ -155,7 +172,23 @@ h2 {
   padding: 200px;
 }
 
-/* paginationdetail.js */
+
+
+
+/* paginationContainer */
+.pagination-container {
+  min-height: 90vh;
+}
+
+/* paginationDetail.js */
+.pagination-detail>h2,
+h4,
+p {
+  color: black;
+  margin-left: 30vh;
+  margin-right: 30vh;
+}
+
 .pagination-image {
   height: 400px;
   width: 400px;
@@ -166,12 +199,12 @@ h2 {
   display: flex;
   margin-left: 39.5%;
   margin-right: 50%;
+  margin-bottom: 50px;
 }
 
 .pagination-button {
   display: flex;
   padding: 3px;
-  
 }
 
 #button-detail {

@@ -5,56 +5,56 @@ function PaginationDetail({ country, currentPage }) {
     // the next 5 functions determine what data is displayed on each page of the PaginationContainer
     const getPageOneData = () => {
         return (
-            <>
+            <div className="pagination-detail">
                 <h2>Welcome to {country.name.common}</h2>
                 <p>{country.name.common}'s official name is {country.name.official}</p>
                 <p>It has a population of {country.population} people.</p>
                 <p>The capital city is {country.capital}.</p>
                 <img className="pagination-image" src={country.name.img} />
-            </>
+            </div>
         )
     };
 
     const getPageTwoData = () => {
         return (
-            <>
+            <div className="pagination-detail">
                 <h2>Area</h2>
                 <p>{country.name.common} is located in the continent of {country.continent}.</p>
                 <p>Its area is {country.area} square metres.</p>
-            </>
+            </div>
         )
     };
 
     const getPageThreeData = () => {
         return (
-            <>
+            <div className="pagination-detail">
                 <h2>Flag</h2>
                 <p>{country.flags.meaning}</p>
-            </>
+            </div>
         )
     };
 
     const getPageFourData = () => {
         return (
-            <>
+            <div className="pagination-detail">
                 <h2>Landmarks</h2>
                 <p>{country.name.common}'s most famous landmarks include:</p>
                 <p>{country.landmarks[0].name}</p>
                 <img className="pagination-image" src={country.landmarks[0].img} />
                 <p>{country.landmarks[1].name}</p>
                 <img className="pagination-image" src={country.landmarks[1].img} />
-            </>
+            </div>
         )
     };
 
     const getPageFiveData = () => {
         return (
-            <>
+            <div className="pagination-detail">
                 <h2>Fun Fact</h2>
                 <h4>{country.funFact.header}</h4>
                 <p>{country.funFact.fact}</p>
                 <img className="pagination-image" src={country.funFact.img} />
-            </>
+            </div>
         )
     };
 
