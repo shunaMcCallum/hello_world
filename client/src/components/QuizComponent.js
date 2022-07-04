@@ -60,7 +60,7 @@ import React, {useState} from 'react';
 		}
 	};
 	return (
-		<div className='app'>
+		<div className='quizapp'>
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}

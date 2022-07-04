@@ -1,4 +1,4 @@
-body {
+.quizapp {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,7 +11,7 @@ body {
     color: #ffffff;
   }
   
-  body {
+.quizapp {
     background-color: #7cc6fe;
     display: flex;
     justify-content: center;
@@ -19,8 +19,7 @@ body {
     min-height: 100vh;
   }
   
-  .app {
-    background-color: #252d4a;
+  .quizapp {
     width: 450px;
     min-height: 200px;
     height: min-content;

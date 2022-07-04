@@ -3,7 +3,8 @@ import Home from './containers/Home';
 import UserContainer from './containers/UserContainer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
-// import QuizComponent from "./components/QuizComponent";
+import QuizComponent from "./components/QuizComponent";
+import './Quiz.css';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
             <NavBar />
             <Routes>
               <Route exact path="/" element={< UserContainer />} />
+              <Route path="/Quiz" element={<QuizComponent/>} />
             </Routes>
           </Router>
           {/* <QuizComponent/> */}
