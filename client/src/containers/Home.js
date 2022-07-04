@@ -38,7 +38,7 @@ const Home = ({ selectedUser, addCountryStudied, removeCountryStudied }) => {
             <div>
                 <div>
                     <h1 className="user-name">{selectedUser.name}'s Page!</h1>
-                    <button><Link to="/" >Logout</Link></button>
+                    <button><Link className="logout-button" to="/" >Logout</Link></button>
                 </div>
                 <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} selectedUser={selectedUser} />
                 {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}

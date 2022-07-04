@@ -46,7 +46,7 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
 
         <div className='item'>
           <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
-          <h3 onClick={handleCountryClick}>{country.name.common}</h3>
+          <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
           <button className='studied-list-button' onClick={handleStudiedClick}>Add to my Studied List</button>
         </div>
       }
