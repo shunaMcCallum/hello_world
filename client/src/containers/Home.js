@@ -15,6 +15,7 @@ const Home = () => {
         fetch("http://localhost:9000/api/countries")
             .then(res => res.json())
             .then(data => setCountries(data))
+        
     }, [])
 
     // function links to ListItem component - when an item is clicked it runs this function
