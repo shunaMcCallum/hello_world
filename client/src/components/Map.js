@@ -1,11 +1,11 @@
 import React from "react";
-import './App.css';
+import '../App.css';
 import { MapContainer, TileLayer, useMap, Marker, Popup, Tooltip, CircleMarker } from 'react-leaflet';
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 // import markerIconPng from "https://www.google.com/search?q=emoji+smilie+png&tbm=isch&ved=2ahUKEwj9rfH_u-H4AhWLw4UKHaUAAwUQ2-cCegQIABAA&oq=emoji+smilie+png&gs_lcp=CgNpbWcQAzIGCAAQHhAIOgQIIxAnOgcIABCxAxBDOgQIABBDOgsIABCABBCxAxCDAToKCAAQsQMQgwEQQzoICAAQgAQQsQM6BQgAEIAEOgQIABAeOgYIABAKEBhQ1QRY4h5g2SFoAHAAeACAAUOIAcwFkgECMTKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=2AjEYv3hKYuHlwSlgYwo&bih=734&biw=1440#imgrc=-pi95dUME9mAqM";
 import { Icon } from "leaflet";
 
-const map = ({ countries }) => {
+const Map = ({ countries }) => {
 
     const markers = countries.map((country) => {
         return (
@@ -41,4 +41,4 @@ const map = ({ countries }) => {
     )
 }
 
-export default map;
+export default Map;

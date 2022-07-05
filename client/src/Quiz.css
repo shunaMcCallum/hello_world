@@ -70,7 +70,6 @@
    .question-section {
     width: 100%;
     position: relative;
-    font-family: "Verdana", cursive, sans-serif;
     font-family:"Lobster";
     font-size: 30px;
     
@@ -85,11 +84,13 @@
   }
   
   .question-count span {
-    font-size: 28px;
+    font-size: 30px;
+    font-family: Lobster;
   }
   
   .question-text {
     margin-bottom: 12px;
+    font-family: "Lobster";
     
   }
   
@@ -114,7 +115,7 @@
   }
   
   button {
-    width: 40%;
+    width: 70%;
     font-size: 20px;
     color: #ffffff;
     background-color: #252d4a;
@@ -125,7 +126,7 @@
     align-items: center;
     border: 5px solid #234668;
     cursor: pointer;
-    margin: auto;
+    margin: 30px;
     padding-bottom: 10px;
     margin-top: 10px;
     font-family:"Lobster";
@@ -137,6 +138,9 @@
     border-radius: 10px;
     width: 600px;
     min-height: 310px;
+    box-shadow: 10px 10px 42px 10px rgba(50, 50, 50, 50); 
+    background-color: lightblue;
+    
     /* text-align: center;
     justify-content: center; */
     /* justify-content: flex-start; */
