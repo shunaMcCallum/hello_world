@@ -22,7 +22,11 @@ const NavBar = ({ handleClick }) => {
                     </li>
 
                     <li>
+                        <Link to="/map">Map</Link>
+                    </li>
+                    <li>
                         <Link to="/Singalong">Singalong</Link>
+
                     </li>
                 </ul>
             </div>

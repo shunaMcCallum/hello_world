@@ -200,6 +200,34 @@ h2 {
   padding: 200px;
 }
 
+/* map.js */
+.map {
+  /* padding-top: 100px; */
+  height: 600px;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: solid;
+  border-color: #1d1d1db3;
+  font-family: "Montserrat", sans-serif;
+  color: #1d1d1db3;
+
+}
+
+/* map.js */
+p {
+  color: #1D1D1D;
+}
+
+
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  color: black;
+}
+
+
+
+
 
 
 
