@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PaginationDetail from '../components/PaginationDetail.js';
 
+
 function PaginationContainer({ country, pageLimit }) {
     // state added here to track which page is being viewed and therefore what data to render
     // currentPage starts at 1 to render Page 1 by default
     const [currentPage, setCurrentPage] = useState(1);
+
 
     // this function links with the "next" button below, which adds one to the currentPage number
     function goToNextPage() {
@@ -47,20 +49,23 @@ function PaginationContainer({ country, pageLimit }) {
                 <PaginationDetail country={country} currentPage={currentPage} />
             </div>
             <div className="buttons">
-            <div className="pagination-button">
-                {/* previous button - triggers the goToPreviousPage function when clicked */}
-                <button id="button-detail" onClick={goToPreviousPage}>prev</button>
-            </div>
-            <div className="pagination-button">
-                {/* numbered navigation buttons - each button triggers the changePage button when clicked
+                <div className="pagination-button">
+                    {/* previous button - triggers the goToPreviousPage function when clicked */}
+                    <button id="button-detail" onClick={goToPreviousPage}>prev</button>
+                </div>
+                <div className="pagination-button">
+                    {/* numbered navigation buttons - each button triggers the changePage button when clicked
                 the getPaginationGroup function is run here to determine which numbers are displayed on the buttons */}
-                {getPaginationGroup().map((item, index) => (
-                    <button id="button-detail" key={index} onClick={changePage}><span>{item}</span></button>
-                ))}
-            </div>
-            <div className="pagination-button">
-                {/* next button - triggers the goToNextPage function when clicked */}
-                <button id="button-detail"  onClick={goToNextPage}>next</button>
+                    {getPaginationGroup().map((item, index) => (
+                        <button id="button-detail" key={index} onClick={changePage}><span>{item}</span></button>
+                    ))}
+                </div>
+                <div className="pagination-button">
+                    {/* next button - triggers the goToNextPage function when clicked */}
+                    <button id="button-detail" onClick={goToNextPage}>next</button>
+                </div>
+                <div className="back-button">
+                    <button onClick={() => window.location.reload()}>Back</button>;
                 </div>
             </div>
         </div>
