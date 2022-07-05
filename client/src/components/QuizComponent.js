@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import NavBar from "../components/NavBar";
 
 
 
@@ -59,7 +60,10 @@ import React, {useState} from 'react';
 			setShowScore(true);
 		}
 	};
-	return (
+		return (
+		<>
+		<NavBar />
+
 		<div className='quizapp'>
 			{showScore ? (
 				<div className='score-section'>
@@ -80,7 +84,8 @@ import React, {useState} from 'react';
 					</div>
 				</>
 			)}
-		</div>
+				</div>
+				</>
 	);
 
 
