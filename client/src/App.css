@@ -64,7 +64,7 @@ li a {
 
 /* NavBar.js */
 .NavBar {
-  padding: 1px;
+  padding: 10px;
   background-color: white;
   text-align: left;
   text-transform: uppercase;
@@ -82,7 +82,7 @@ li a {
   /* -webkit-text-stroke-color: #1a48a0; */
   padding: 12px;
   color: #C8102E;
-  font-size: 80px;
+  font-size: 60px;
   letter-spacing: 8px;
   /* background-image: linear-gradient(to left, violet, green, blue, yellow, orange, red);
   -webkit-background-clip: text;
@@ -100,7 +100,7 @@ li a {
   padding: 80px;
   color: #012169;
   letter-spacing: 8px;
-  font-size: 60px;
+  font-size: 40px;
 
 
 
@@ -216,7 +216,7 @@ h2 {
 header {
   background-color: white;
   padding: 10px;
-  border-radius: 0 0 85% 85% / 60%;
+  border-radius: 0 0 85% 85% / 20%;
 }
 
 
