@@ -5,17 +5,32 @@ import QuizComponent from "./components/QuizComponent";
 import Video from './components/Video';
 import './Quiz.css';
 import './App.css';
+import Map from "./map.js";
+
 
 function App() {
 
   const [users, setUsers] = useState([]);
+
+  const [countries, setCountries] = useState([])
+
   const [background, setBackground] = useState(true);
+
 
   useEffect(() => {
     fetch("http://localhost:9000/api/users")
       .then(res => res.json())
       .then(data => setUsers(data));
   }, [])
+
+
+  useEffect(() => {
+    fetch("http://localhost:9000/api/countries")
+      .then(res => res.json())
+      .then(data => setCountries(data));
+  }, [])
+
+
 
   const toggleBackground = () => {
     if (background === true) {
@@ -24,6 +39,7 @@ function App() {
       setBackground(true);
     }
   }
+
 
   return (
     <div className="container">
@@ -35,6 +51,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
             <Route path="/Quiz" element={<QuizComponent />} />
+            <Route path="/map" element={<map />} />
             <Route path="/Singalong" element={<Video />} />
           </Routes>
         </Router>
@@ -44,13 +61,14 @@ function App() {
           <button className="background-button" onClick={toggleBackground}>Start Clouds</button>
           <Router>
             <Routes>
-              <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
+              <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />
               <Route path="/Quiz" element={<QuizComponent />} />
+              <Route path="/map" element={<Map countries={countries} />} />
               <Route path="/Singalong" element={<Video />} />
             </Routes>
           </Router>
         </div>}
-      </div>
+    </div>
   );
 }
 

@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: "crayon";
+  /*Can be any text*/
+  src: url("./fonts/ColoredCrayons-7wPR 2.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "toy-story";
   /*Can be any text*/
   src: url("./fonts/GillSansUltraBold.ttf") format("truetype");
@@ -59,6 +65,48 @@ li a {
   font-weight: 400;
   letter-spacing: 1px;
 }
+
+/* home.js */
+header {
+  background-color: white;
+  padding: 10px;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+/* home.js */
+.headline {
+  font-family: "crayon";
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: #1a48a0; */
+  color: blue;
+  font-size: 70px;
+  letter-spacing: 5px;
+
+}
+
+/* listitem.js */
+.item {
+  display: inline-block;
+  background-color: none;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* listitem.js */
+.flag-image {
+  height: 213px;
+  width: 320px;
+}
+
+/* app.js */
+/* .background {
+  background-image: url('./images/cloud_background.jpg');
+  background-size: contain;
+  padding-bottom: 50px;
+  min-height: 1326.690px;
+} */
 
 /* app.js */
 .container {
@@ -192,6 +240,31 @@ header {
 /* listitem.js */
 .select-button {
   padding: 200px;
+}
+
+/* map.js */
+.map {
+  /* padding-top: 100px; */
+  height: 600px;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  border: solid;
+  border-color: #1d1d1db3;
+  font-family: "Montserrat", sans-serif;
+  color: #1d1d1db3;
+
+}
+
+/* map.js */
+p {
+  color: #1D1D1D;
+}
+
+
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  color: black;
 }
 
 /* paginationContainer */
