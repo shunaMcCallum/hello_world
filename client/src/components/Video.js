@@ -6,10 +6,10 @@ const Video = () => {
 
 
     return (
-        <div>
+        <div> 
             <NavBar />
-            <div className="video">
-                <ReactPlayer url="https://www.youtube.com/watch?v=V1508wboZXk" controls={true} />
+            <div className="video-container">
+                <div><ReactPlayer className="video" url="https://www.youtube.com/watch?v=V1508wboZXk" controls={true} /></div>
             </div>
         </div>
 

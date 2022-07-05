@@ -144,7 +144,7 @@ header {
 /* listitem.js */
 .homepage-h2:hover {
   cursor: default;
-  color: black;
+  color: rgb(62, 62, 62);
 }
 
 /* listitem.js */
@@ -336,11 +336,11 @@ p {
 
 /* paginationDetail.js */
 .pagination-detail>h2,
-h4,
-p {
+h4, p, img {
   color: black;
-  margin-left: 30vh;
-  margin-right: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100vh;
 }
 
 /* paginationDetail.js */
@@ -371,10 +371,15 @@ p {
 }
 
 /* video.js */
-.video {
-  margin-top: 50px;
-  margin-left: 27%;
+.video-container {
+  margin-top: 60px;
   min-height: 90vh;
+}
+
+/* video.js */
+.video {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* paginationDetail */
