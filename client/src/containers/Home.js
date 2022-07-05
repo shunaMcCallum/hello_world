@@ -19,6 +19,11 @@ const Home = ({ user }) => {
             .then(data => setCountries(data));
     }
 
+    // function for sorting the countries alphabetically by its "name.common" key
+    const sortedCountries = countries.sort(function (a, b) {
+        return a.name.common.localeCompare(b.name.common)
+    })
+
     // function links to ListItem component - when an item is clicked it runs this function
     const onCountryClick = (country) => {
         setSelectedCountry(country);
@@ -53,7 +58,6 @@ const Home = ({ user }) => {
         user.countries_studied = array;
         UserService.putUser(user._id, { countries_studied: user.countries_studied })
         UserService.getUsers()
-
         getCountries()
     }
 
@@ -67,7 +71,7 @@ const Home = ({ user }) => {
             <div>
                 <h1>Fun with Flags!</h1>
                 <div>
-                    {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
+                    {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : <CountryList countries={sortedCountries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
                 </div>
             </div>
         </div>

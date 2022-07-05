@@ -131,6 +131,10 @@ header {
   width: 320px;
 }
 
+.star > path {
+  color:#ffee15;
+}
+
 /* app.js */
 .container {
   text-align: center;
