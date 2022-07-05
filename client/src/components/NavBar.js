@@ -1,13 +1,7 @@
 import React from "react";
-import { Link, Route } from "react-router-dom";
-import UserService from '../services/UserService';
-
+import { Link } from "react-router-dom";
 
 const NavBar = ({handleClick}) => {
-
-    // const handleClick = () => {
-    //     window.location.reload();
-    // }
 
     return (
 
@@ -25,6 +19,10 @@ const NavBar = ({handleClick}) => {
 
                     <li>
                         <Link to="/Quiz">Quiz</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/Singalong">Singalong</Link>
                     </li>
                 </ul>
             </div>

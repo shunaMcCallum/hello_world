@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Home from './containers/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
 import QuizComponent from "./components/QuizComponent";
+import Video from './components/Video';
 import './Quiz.css';
 import './App.css';
 
@@ -33,6 +33,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
             <Route path="/Quiz" element={<QuizComponent />} />
+            <Route path="/Singalong" element={<Video />} />
           </Routes>
         </Router>
       </div> :
@@ -43,6 +44,7 @@ function App() {
             <Routes>
               <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
               <Route path="/Quiz" element={<QuizComponent />} />
+              <Route path="/Singalong" element={<Video />} />
             </Routes>
           </Router>
         </div>}
