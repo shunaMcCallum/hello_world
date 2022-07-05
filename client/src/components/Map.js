@@ -24,8 +24,6 @@ const Map = ({ countries }) => {
         )
     })
 
-
-
     return (
         <>
             <div>
@@ -39,7 +37,6 @@ const Map = ({ countries }) => {
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     {markers}
-
                 </MapContainer>
             </div>
         </>

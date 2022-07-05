@@ -1,4 +1,6 @@
 import React from 'react';
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveCountryStudied, user }) => {
 
@@ -23,21 +25,12 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
   // function checks whether this country is included in the user's countries_studied list, and in the return below it determines how the
   // country is displayed in the browser - countries that have been studied will display differently to those that have not been studied
   const checkIfCountryStudied = () => {
-
-    // for (let item of user.countries_studied) {
-    //   if (item.name.common !== country.name.common) {
-    //     return false
-    //   } else {
-    //     return true
-
     for (let i = 0; i < user.countries_studied.length; i++) {
       if (user.countries_studied[i].name.common === country.name.common) {
         return true;
-
       }
     }
   }
-
 
   return (
 
@@ -46,15 +39,14 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
       {checkIfCountryStudied() ?
         <div className='item'>
           <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
-          <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
-          <p>STUDIED</p>
-          <button className="studied-list-button" onClick={handleRemoveStudiedClick}>Remove from my Studied List</button>
+          <h2 className="homepage-h2" onClick={handleCountryClick}><FontAwesomeIcon icon={faStar} beat className="star" /> {country.name.common} <FontAwesomeIcon icon={faStar} beat className="star" /></h2>
+          <button id="studied-list-button" className="button-style" onClick={handleRemoveStudiedClick}>Remove from my Studied List</button>
         </div> :
 
         <div className='item'>
           <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
           <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
-          <button className="studied-list-button" onClick={handleStudiedClick}>Add to my Studied List</button>
+          <button id="studied-list-button" className="button-style" onClick={handleStudiedClick}>Add to my Studied List</button>
         </div>
       }
     </>
