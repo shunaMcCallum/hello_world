@@ -842,7 +842,8 @@ db.countries.insertMany([
             }
         ],
         "nationalAnthem": "/mexico.mp3",
-        "hello": "hola.mp3"
+        "hello": "Hola",
+        "helloAudio": "hola.mp3"
     }
 ])
 

@@ -3,13 +3,13 @@ import { Howl } from 'howler';
 
 function PaginationDetail({ country, currentPage }) {
 
-    const soundSrc = '/mexico.mp3';  //  "/somalia.mp3"
-    const soundSrc2 = '/hola.mp3';  //  "/somalia.mp3"
+    const soundSrc = country.nationalAnthem;  //  "/mexico.mp3"
+    const soundSrc2 = country.helloAudio;  //  "/hola.mp3"
     let sound;
 
     const playSound = (src) => {
         sound = new Howl({ src });
-        sound.play();                     // console.log(sound);
+        sound.play();                     
     };
     const stopSound = (src) => {
         sound.stop();
@@ -23,6 +23,7 @@ function PaginationDetail({ country, currentPage }) {
                 <p>{country.name.common}'s official name is {country.name.official}</p>
                 <p>It has a population of {country.population} people.</p>
                 <p>The capital city is {country.capital}.</p>
+                <p>{country.name.common} is located in the continent of {country.continent}.</p>
                 <img className="pagination-image" src={country.name.img} />
             </div>
         )
@@ -31,9 +32,15 @@ function PaginationDetail({ country, currentPage }) {
     const getPageTwoData = () => {
         return (
             <div className="pagination-detail">
-                <h2>Area</h2>
-                <p>{country.name.common} is located in the continent of {country.continent}.</p>
-                <p>Its area is {country.area} square metres.</p>
+                <h2>Audio</h2>
+                <h4>National Anthem</h4>
+                <p>Click the button below to hear {country.name.common}'s national anthem!</p>
+                <button onClick={() => playSound(soundSrc)}> National Anthem </button>
+                <button onClick={() => stopSound(soundSrc)}> Stop </button>
+
+                <h4>Saying Hello</h4>
+                <p>In {country.name.common}, to say "hello" you say "{country.hello}". Click the button below to hear how this sounds!</p>
+                <button onClick={() => playSound(soundSrc2)}> Say Hello </button>
             </div>
         )
     };
@@ -44,10 +51,7 @@ function PaginationDetail({ country, currentPage }) {
             <div className="pagination-detail">
                 <h2>Flag</h2>
                 <p>{country.flags.meaning}</p>
-            </div>
-                <button onClick={() => playSound(soundSrc)}> National Anthem </button>
-                <button onClick={() => playSound(soundSrc2)}> Say Hello </button>
-                <button onClick={() => stopSound(soundSrc)}> Stop </button>
+            </div> 
             </>
         )
     };
