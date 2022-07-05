@@ -354,15 +354,18 @@ p {
 
 /* paginationDetail */
 #national-anthem-button {
-  margin-left: 46.5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* paginationDetail */
 #stop-button {
-  margin-left: 48.9%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* paginationDetail */
 #hello-button {
- margin-left: 48.2%;
+  margin-left: auto;
+  margin-right: auto;
 }
