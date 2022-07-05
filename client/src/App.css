@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: "crayon";
+  /*Can be any text*/
+  src: url("./fonts/ColoredCrayons-7wPR 2.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "toy-story";
   /*Can be any text*/
   src: url("./fonts/GillSansUltraBold.ttf") format("truetype");
@@ -72,11 +78,12 @@ header {
 
 /* home.js */
 .headline {
-  font-family: "bloone";
-  color: #ffee15;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #1a48a0;
-  font-size: 50px;
+  font-family: "crayon";
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: #1a48a0; */
+  color: blue;
+  font-size: 70px;
+  letter-spacing: 5px;
 
 }
 
