@@ -4,14 +4,8 @@ import { Link } from "react-router-dom";
 const NavBar = ({ handleClick }) => {
 
     return (
-
-
         <>
-
-
             <div className="NavBar">
-
-
                 <ul>
                     <li>
                         <Link to="/" onClick={handleClick}>Home</Link>
@@ -32,7 +26,6 @@ const NavBar = ({ handleClick }) => {
             </div>
 
             <div>
-
                 <header>
                     <h1 className="headline">
                         Hello, World!

@@ -64,9 +64,9 @@ function PaginationContainer({ country, pageLimit }) {
                     {/* next button - triggers the goToNextPage function when clicked */}
                     <button id="button-detail" onClick={goToNextPage}>next</button>
                 </div>
-                <div className="back-button">
-                    <button onClick={() => window.location.reload()}>Back</button>;
-                </div>
+            </div>
+            <div className="back-button">
+                <button id="button-detail" onClick={() => window.location.reload()}>Back</button>
             </div>
         </div>
     );

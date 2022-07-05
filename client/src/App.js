@@ -45,7 +45,9 @@ function App() {
     <div className="container">
       {background ? <div className="countries" id="cloud-intro">
         <Router>
-          <button className="background-button" onClick={toggleBackground}>Stop Moving Background</button>
+          <div className="background-button-container">
+            <button className="background-button" onClick={toggleBackground}>Stop Clouds</button>
+          </div>
           <Routes>
             <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
             <Route path="/Quiz" element={<QuizComponent />} />
@@ -56,7 +58,7 @@ function App() {
       </div> :
 
         <div className="countries" id="cloud-intro-stop">
-          <button className="background-button" onClick={toggleBackground}>Start Moving Background</button>
+          <button className="background-button" onClick={toggleBackground}>Start Clouds</button>
           <Router>
             <Routes>
               <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />
