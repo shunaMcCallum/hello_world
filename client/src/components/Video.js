@@ -1,17 +1,19 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
+import NavBar from "../components/NavBar";
 
-const Video = () => (
-    <div className="video-responsive">
-        <iframe
-            width="853"
-            height="480"
-            src='https://www.youtube.com/watch?v=V1508wboZXk'
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            title="Video"
-        />
-    </div>
-);
+const Video = () => {
+
+
+    return (
+        <div>
+            <NavBar />
+            <div className="video">
+                <ReactPlayer url="https://www.youtube.com/watch?v=V1508wboZXk" controls={true} />
+            </div>
+        </div>
+
+    );
+};
 
 export default Video;

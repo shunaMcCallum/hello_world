@@ -242,3 +242,10 @@ p {
 .back-button {
   width: auto;
 }
+
+/* video.js */
+.video {
+  margin-top: 50px;
+  margin-left: 27%;
+  min-height: 90vh;
+}
