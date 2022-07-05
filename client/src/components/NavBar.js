@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
+import UserService from '../services/UserService';
 
 
-const NavBar = () => {
+const NavBar = ({handleClick}) => {
+
+    // const handleClick = () => {
+    //     window.location.reload();
+    // }
+
     return (
 
 
@@ -14,7 +20,7 @@ const NavBar = () => {
 
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/" onClick={handleClick}>Home</Link>
                     </li>
 
                     <li>
