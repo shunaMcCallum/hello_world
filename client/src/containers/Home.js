@@ -65,14 +65,12 @@ const Home = ({ user, setUsers }) => {
         <div>
             <NavBar handleClick={handleClick} />
             <div>
-                <h1>Fun with Flags!</h1>
+                <h1 className="fun-title">Fun with Flags!</h1>
                 <div>
                     {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
                 </div>
             </div>
 
-            <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />
-            {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : null}
 
         </div>
 
