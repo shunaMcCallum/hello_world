@@ -131,6 +131,23 @@ header {
   width: 320px;
 }
 
+/* listitem.js */
+.flag-image:hover {
+  box-shadow: 6px 8px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* listitem.js */
+.button-style:active {
+  transform: translateX(1.5px) translateY(1.5px);
+}
+
+/* listitem.js */
+.homepage-h2:hover {
+  cursor: default;
+  color: black;
+}
+
+/* listitem.js */
 .star > path {
   color:#ffee15;
 }
@@ -179,13 +196,13 @@ header {
 /* app.js */
 h1 {
   font-family: "Montserrat", sans-serif;
-  color: #1d1d1db3;
+  color: black;
 }
 
 /* app.js */
 h2 {
   font-family: "Montserrat", sans-serif;
-  color: #1d1d1db3;
+  color: black;
   font-weight: bold;
 }
 
@@ -287,16 +304,19 @@ p {
   margin-bottom: -15px;
 }
 
+/* paginationContainer */
 #button1 {
   margin-left: auto;
   margin-right: -36rem;
 }
 
+/* paginationContainer */
 #button2 {
   margin-left: 2px;
   margin-right: 2px;
 }
 
+/* paginationContainer */
 #button3 {
   margin-left: -36rem;
   margin-right: auto;
@@ -307,6 +327,7 @@ p {
   padding-bottom: 20px;
 }
 
+/* paginationContainer */
 #back-button {
   width: auto;
   margin-left: auto;
