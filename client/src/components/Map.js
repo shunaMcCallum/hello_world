@@ -10,12 +10,13 @@ const Map = ({ countries }) => {
 
     const markers = countries.map((country) => {
         return (
+
             <Marker position={country.latlng} icon={new Icon({ iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41] })}>
                 <Popup className="popup">
                     <p>
                         {country.name.common}
                         <p>Population:</p>
-                        {country.population}
+                        {country.population.toLocaleString()}
                     </p>
                 </Popup>
 
@@ -25,8 +26,11 @@ const Map = ({ countries }) => {
 
     return (
         <>
-            <div >
+            <div>
                 <NavBar />
+            </div>
+            <div >
+                <h1 className="fun-title">A map of the world!</h1>
                 <MapContainer className="map" center={[51.505, -0.09]} zoom={2} scrollWheelZoom={true}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
