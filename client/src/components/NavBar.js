@@ -3,7 +3,7 @@ import { Link, Route } from "react-router-dom";
 import UserService from '../services/UserService';
 
 
-const NavBar = ({handleClick}) => {
+const NavBar = ({ handleClick }) => {
 
     // const handleClick = () => {
     //     window.location.reload();
@@ -32,7 +32,7 @@ const NavBar = ({handleClick}) => {
             <div>
 
                 <header>
-                    <h1 className="airways">
+                    <h1 className="headline">
                         Hello, World!
                     </h1>
                 </header>

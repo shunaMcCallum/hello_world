@@ -4,6 +4,24 @@
   src: url("./fonts/Airways_PERSONAL_USE_ONLY.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "toy-story";
+  /*Can be any text*/
+  src: url("./fonts/GillSansUltraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "backtoschool";
+  /*Can be any text*/
+  src: url("./fonts/BackToSchoolPersonalUseRegular-w1xX2.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "bloone";
+  /*Can be any text*/
+  src: url("./fonts/KingthingsBloone-3926.ttf") format("truetype");
+}
+
 /* NavBar.js */
 li {
   float: left;
@@ -53,10 +71,13 @@ header {
 }
 
 /* home.js */
-.airways {
-  font-family: airways;
-  color: #1D1D1Db3;
-  font-size: 70px;
+.headline {
+  font-family: "bloone";
+  color: #ffee15;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1a48a0;
+  font-size: 50px;
+
 }
 
 /* listitem.js */
