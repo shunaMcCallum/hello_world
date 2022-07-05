@@ -128,9 +128,9 @@ h2 {
 
 /* map.js */
 .map {
-  padding-top: 100px;
-  height: 800px;
-  width: 2000px;
+  /* padding-top: 100px; */
+  height: 600px;
+  width: 100%;
   left: 50%;
   transform: translate(-50%, 0%);
   border: solid;
@@ -144,6 +144,7 @@ h2 {
 p {
   color: #1D1D1D;
 }
+
 
 * {
   font-family: "Verdana", cursive, sans-serif;
