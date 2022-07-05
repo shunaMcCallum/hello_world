@@ -60,7 +60,8 @@ db.countries.insertMany([
                 "name": "Shanghai Old City",
                 "img": "https://qph.cf2.quoracdn.net/main-qimg-6f1c01c2f025980d97a6b41274f7c81b.webp"
             }
-        ]
+        ],
+        "nationalAnthem": "/somalia.mp3"
     },
     {
         "name": {
@@ -784,6 +785,65 @@ db.countries.insertMany([
                 "img": "https://static.dezeen.com/uploads/2014/12/Asplund-Public-Library_dezeen_ban.jpg"
             }
         ]
+    },
+    {
+        "name": {
+            "common": "Mexico",
+            "official": "United Mexican States",
+            "img": "https://geology.com/world/mexico-map.gif"
+        },
+        "currencies": {
+                "name": "Mexican peso",
+                "symbol": "$"
+        },
+        "capital": "Mexico City",
+        "languages": {
+            "spa": "Spanish"
+        },
+        "latlng": [
+            23,
+            -102
+        ],
+        "area": 1964375,
+        "maps": {
+            "googleMaps": "https://goo.gl/maps/s5g7imNPMDEePxzbA",
+            "openStreetMaps": "https://www.openstreetmap.org/relation/114686"
+        },
+        "population": 128932753,
+        "continent": "North America",
+        "flags": {
+            "png": "https://flagcdn.com/w320/mx.png",
+            "svg": "https://flagcdn.com/mx.svg",
+            "meaning": "The design of the Mexican flag was influenced by the French flag. The green colour symbolises independence, white is for the Roman Catholic religion and red is for union - the 'Three Guarantees of Iguala."
+        },
+        "coatOfArms": {
+            "png": "https://mainfacts.com/media/images/coats_of_arms/mx.png",
+            "svg": "https://mainfacts.com/media/images/coats_of_arms/mx.svg"
+        },
+        "capitalInfo": {
+            "latlng": [
+                19.43,
+                -99.13
+            ]
+        },
+        "funFact": {
+            "header": "Mexico was hit by a Meteorite!",
+            "fact": "That's right, the meteorite that wiped out the dinosaurs 65 million years ago hit the Mexican peninsula of Yucatán. A 180 square meters crater with a depth of more than 600 meters was left behind. Employees of the state oil company PEMEX discovered the crater in 1981 while drilling an oil well.",
+            "img": "https://assets.answersingenesis.org/img/articles/am/v15/n1/barringer-crater.jpg"
+        },
+        "landmarks": [
+            {
+                "name": "Chichen Itza",
+                "img": "https://travel2next.com/wp-content/uploads/landmark-in-mexico-chichen-itza-1024x748.jpg"
+            },
+            {
+                "name": "Great Pyramid of Cholula",
+                "img": "https://travel2next.com/wp-content/uploads/mexico-landmarks-2-1024x660.jpg"
+            }
+        ],
+        "nationalAnthem": "/mexico.mp3",
+        "hello": "Hola",
+        "helloAudio": "hola.mp3"
     }
 ])
 

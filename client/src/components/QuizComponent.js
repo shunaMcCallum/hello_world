@@ -1,43 +1,45 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import NavBar from "../components/NavBar";
+
 
 
 
 	const QuizComponent = () => {
 	const questions = [
 		{
-			questionText: 'What is the capital of Somalia?',
+			questionText: 'What is the capital of Mexico?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: false },
-				{ answerText: 'Mogadishu', isCorrect: true },
+				{ answerText: 'Mexico Capitales', isCorrect: false },
+				{ answerText: 'Tijuana', isCorrect: false },
+				{ answerText: 'Cancun', isCorrect: false },
+				{ answerText: 'Mexico City', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'What is the population of Somali?',
+			questionText: 'What is the population of Mexico?',
 			answerOptions: [
-				{ answerText: 15893219, isCorrect: true },
-				{ answerText: 27182911, isCorrect: false },
-				{ answerText: 12221091, isCorrect: false },
-				{ answerText: 1828918, isCorrect: false },
+				{ answerText: "128.9 million", isCorrect: true },
+				{ answerText: "69 million", isCorrect: false },
+				{ answerText: "142.1 million", isCorrect: false },
+				{ answerText: "94.3 million", isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What continent is Somalia on?',
+			questionText: 'How do you say "Hello" in Mexico?',
 			answerOptions: [
-				{ answerText: 'Europe', isCorrect: false },
-				{ answerText: 'Africa', isCorrect: true },
-				{ answerText: 'Asia', isCorrect: false },
-				{ answerText: 'North America', isCorrect: false },
+				{ answerText: 'Konnichiwa', isCorrect: false },
+				{ answerText: 'Hola', isCorrect: true },
+				{ answerText: 'Salve', isCorrect: false },
+				{ answerText: 'Guten Tag', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What currency does this country use?',
+			questionText: 'Which of these landmarks are in Mexico?',
 			answerOptions: [
-				{ answerText: 'Somali Dolla', isCorrect: false },
-				{ answerText: 'Somali Pound', isCorrect: false },
-				{ answerText: 'Somali Shilling', isCorrect: true },
-				{ answerText: 'Samali Pesso', isCorrect: false },
+				{ answerText: 'The statue of chihuahua', isCorrect: false },
+				{ answerText: 'The great wall of Mexico', isCorrect: false },
+				{ answerText: 'Great Pyramid of Cholula', isCorrect: true },
+				{ answerText: 'Grande Ben', isCorrect: false },
 			],
 		},
 	];
@@ -59,14 +61,22 @@ import React, {useState} from 'react';
 			setShowScore(true);
 		}
 	};
-	return (
+		return (
+		<>
+		<NavBar />
+			<h1 className='Quiz-title'>QUIZ</h1>
 		<div className='quizapp'>
+		
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
 				</div>
-			) : (
-				<>
+				
+			
+			) : ( 
+				<>	
+				
+				<div className='border'>
 					<div className='question-section'>
 						<div className='question-count'>
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
@@ -77,10 +87,16 @@ import React, {useState} from 'react';
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
 							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
+						
+					</div>	
 					</div>
+					<img className="quizmaster" src={'https://strikerless.com/wp-content/uploads/2016/02/quizmaster-image.png'} />
 				</>
 			)}
-		</div>
+				</div>
+				
+				</>
+				
 	);
 
 
