@@ -47,13 +47,13 @@ const ListItem = ({ country, onCountryClick, handleCountryStudied, handleRemoveC
         <div className='item'>
           <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
           <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
-          <button className="studied-list-button" onClick={handleRemoveStudiedClick}>Remove from my Studied List</button>
+          <button id="studied-list-button" className="button-style" onClick={handleRemoveStudiedClick}>Remove from my Studied List</button>
         </div> :
 
         <div className='item'>
           <img className='flag-image' src={country.flags.png} alt={country.name.common} onClick={handleCountryClick} />
           <h2 className="homepage-h2" onClick={handleCountryClick}>{country.name.common}</h2>
-          <button className="studied-list-button" onClick={handleStudiedClick}>Add to my Studied List</button>
+          <button id="studied-list-button" className="button-style" onClick={handleStudiedClick}>Add to my Studied List</button>
         </div>
       }
     </>

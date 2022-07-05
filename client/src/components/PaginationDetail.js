@@ -35,12 +35,15 @@ function PaginationDetail({ country, currentPage }) {
                 <h2>Audio</h2>
                 <h4>National Anthem</h4>
                 <p>Click the button below to hear {country.name.common}'s national anthem!</p>
-                <button onClick={() => playSound(soundSrc)}> National Anthem </button>
-                <button onClick={() => stopSound(soundSrc)}> Stop </button>
-
+                <div className="audio-button-container">
+                    <button id="national-anthem-button" className="button-style" onClick={() => playSound(soundSrc)}> National Anthem </button>
+                    <button id="stop-button" className="button-style" onClick={() => stopSound(soundSrc)}> Stop </button>
+                </div>
                 <h4>Saying Hello</h4>
                 <p>In {country.name.common}, to say "hello" you say "{country.hello}". Click the button below to hear how this sounds!</p>
-                <button onClick={() => playSound(soundSrc2)}> Say Hello </button>
+                <div className="audio-button-container">
+                    <button id="hello-button" className="button-style" onClick={() => playSound(soundSrc2)}> Say Hello </button>
+                </div>
             </div>
         )
     };

@@ -41,7 +41,7 @@ function App() {
       {background ? <div className="countries" id="cloud-intro">
         <Router>
           <div className="background-button-container">
-            <button className="background-button" onClick={toggleBackground}>Stop Clouds</button>
+            <button className="button-style" onClick={toggleBackground}>Stop Clouds</button>
           </div>
           <Routes>
             <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
@@ -53,7 +53,7 @@ function App() {
       </div> :
 
         <div className="countries" id="cloud-intro-stop">
-          <button className="background-button" onClick={toggleBackground}>Start Clouds</button>
+          <button className="button-style" onClick={toggleBackground}>Start Clouds</button>
           <Router>
             <Routes>
               <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />

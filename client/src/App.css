@@ -28,6 +28,37 @@
   src: url("./fonts/KingthingsBloone-3926.ttf") format("truetype");
 }
 
+/* ALL BUTTONS */
+.button-style {
+  background-color: rgb(236, 234, 234);
+  color: #1D1D1D;
+
+  border-radius: 7px;
+  border-style: solid;
+  border-color: rgb(236, 234, 234);
+
+  padding: 3px;
+  margin: 10px;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: small;
+
+  width: auto;
+}
+
+/* ALL BUTTONS */
+.button-style:hover {
+  background-color: #ddd;
+  border-color: #ddd;
+  box-shadow: 4px 6px 10px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* ALL BUTTONS */
+.button-style:active {
+  transform: translateX(1.5px) translateY(1.5px);
+}
+
 /* NavBar.js */
 li {
   float: left;
@@ -101,14 +132,6 @@ header {
 }
 
 /* app.js */
-/* .background {
-  background-image: url('./images/cloud_background.jpg');
-  background-size: contain;
-  padding-bottom: 50px;
-  min-height: 1326.690px;
-} */
-
-/* app.js */
 .container {
   text-align: center;
 
@@ -168,24 +191,6 @@ h2 {
   padding-left: 5px;
 }
 
-/* app.js */
-.background-button {
-  background-color: rgb(236, 234, 234);
-  border-radius: 7px;
-  border-style: solid;
-  border-color: rgb(236, 234, 234);
-  padding: 3px;
-  color: #1D1D1D;
-  width: auto;
-  margin: 10px;
-  font-size: small;
-}
-
-.background-button:hover {
-  background-color: #ddd;
-  color: #1D1D1D;
-}
-
 /* home.js */
 header {
   background-color: white;
@@ -228,18 +233,9 @@ header {
 }
 
 /* listitem.js */
-.studied-list-button {
-  background-color: rgb(236, 234, 234);
-  border-radius: 7px;
-  border-style: solid;
-  border-color: rgb(236, 234, 234);
-  padding: 3px;
-  color: #1D1D1D;
-}
-
-/* listitem.js */
-.select-button {
-  padding: 200px;
+#studied-list-button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* map.js */
@@ -273,10 +269,8 @@ p {
 }
 
 /* paginationContainer.js */
-.buttons {
+.pagination-buttons-container {
   display: flex;
-  margin-left: 39.5%;
-  margin-right: 50%;
   margin-bottom: 20px;
 }
 
@@ -284,14 +278,35 @@ p {
 .pagination-button {
   display: flex;
   padding: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -15px;
 }
 
-/* /* paginationContainer.js */
-#button-detail {
+#button1 {
+  margin-left: auto;
+  margin-right: -36rem;
+}
+
+#button2 {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#button3 {
+  margin-left: -36rem;
+  margin-right: auto;
+}
+
+/* paginationContainer */
+.back-button {
+  padding-bottom: 20px;
+}
+
+#back-button {
   width: auto;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 3px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* paginationDetail.js */
@@ -307,7 +322,7 @@ p {
 .pagination-image {
   height: 400px;
   width: 400px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 /* paginationDetail.js */
@@ -330,16 +345,24 @@ p {
   padding-bottom: 20px;
 }
 
-/* paginationDetail */
-.back-button {
-  width: auto;
-  margin-bottom: 40px;
-  margin-left: 48%;
-}
-
 /* video.js */
 .video {
   margin-top: 50px;
   margin-left: 27%;
   min-height: 90vh;
+}
+
+/* paginationDetail */
+#national-anthem-button {
+  margin-left: 46.5%;
+}
+
+/* paginationDetail */
+#stop-button {
+  margin-left: 48.9%;
+}
+
+/* paginationDetail */
+#hello-button {
+ margin-left: 48.2%;
 }

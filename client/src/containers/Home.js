@@ -4,7 +4,7 @@ import PaginationContainer from './PaginationContainer.js';
 import UserService from '../services/UserService';
 import NavBar from "../components/NavBar";
 
-const Home = ({ user, setUsers }) => {
+const Home = ({ user }) => {
 
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
@@ -71,10 +71,6 @@ const Home = ({ user, setUsers }) => {
                 </div>
             </div>
         </div>
-
-
-
-
 
     )
 }
