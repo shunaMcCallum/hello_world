@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Lobster";
+  /*Can be any text*/
+  src: url("./fonts/Lobster-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Amatic";
+  /*Can be any text*/
+  src: url("./fonts/AmaticSC-Bold.ttf") format("truetype");
+}
+
+
+
+
+
+.Quiz-title {
+
+  font-size: 130px;
+  font-family: "Verdana", cursive, sans-serif;
+  font-family: "Lobster";
+  color: black;
+}
+
 .quizapp {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,28 +30,34 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  * {
+  /* * {
     font-family: "Verdana", cursive, sans-serif;
     color: #ffffff;
-  }
+  } */
   
 .quizapp {
-    background-color: #7cc6fe;
+    /* background-color: #7cc6fe; */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-  }
+    
+  } 
   
   .quizapp {
-    width: 450px;
-    min-height: 200px;
+    /* width: 450px; */
+    /* min-height: 800px; */
     height: min-content;
-    border-radius: 15px;
+    border-radius: 50px;
     padding: 20px;
-    box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+    /* box-shadow: 10px 10px 42px 10px rgba(50, 50, 50, 50);  */
     display: flex;
     justify-content: space-evenly;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+
+    
   }
   
   .score-section {
@@ -40,10 +70,18 @@
    .question-section {
     width: 100%;
     position: relative;
-  }
+    font-family: "Verdana", cursive, sans-serif;
+    font-family:"Lobster";
+    font-size: 30px;
+    
+   
+   
+   }
   
   .question-count {
     margin-bottom: 20px;
+    border-radius: 100px;
+    
   }
   
   .question-count span {
@@ -52,6 +90,7 @@
   
   .question-text {
     margin-bottom: 12px;
+    
   }
   
   .timer-text {
@@ -70,11 +109,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    
   }
   
   button {
-    width: 100%;
-    font-size: 16px;
+    width: 40%;
+    font-size: 20px;
     color: #ffffff;
     background-color: #252d4a;
     border-radius: 15px;
@@ -84,8 +125,27 @@
     align-items: center;
     border: 5px solid #234668;
     cursor: pointer;
+    margin: auto;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-family:"Lobster";
+   
   }
   
+  .border{
+    border-style: solid;
+    border-radius: 10px;
+    width: 600px;
+    min-height: 310px;
+    /* text-align: center;
+    justify-content: center; */
+    /* justify-content: flex-start; */
+    
+
+  }
+  
+ 
+
   .correct {
     background-color: #2f922f;
   }

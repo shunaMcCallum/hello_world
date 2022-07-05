@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({handleClick}) => {
+const NavBar = ({ handleClick }) => {
 
     return (
 
@@ -30,7 +30,7 @@ const NavBar = ({handleClick}) => {
             <div>
 
                 <header>
-                    <h1 className="airways">
+                    <h1 className="headline">
                         Hello, World!
                     </h1>
                 </header>
