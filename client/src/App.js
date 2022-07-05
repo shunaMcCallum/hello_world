@@ -5,15 +5,13 @@ import QuizComponent from "./components/QuizComponent";
 import Video from './components/Video';
 import './Quiz.css';
 import './App.css';
-import Map from "./map.js";
+import Map from "./components/Map.js";
 
 
 function App() {
 
   const [users, setUsers] = useState([]);
-
   const [countries, setCountries] = useState([])
-
   const [background, setBackground] = useState(true);
 
 
@@ -30,8 +28,6 @@ function App() {
       .then(data => setCountries(data));
   }, [])
 
-
-
   const toggleBackground = () => {
     if (background === true) {
       setBackground(false);
@@ -39,7 +35,6 @@ function App() {
       setBackground(true);
     }
   }
-
 
   return (
     <div className="container">
@@ -51,7 +46,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
             <Route path="/Quiz" element={<QuizComponent />} />
-            <Route path="/map" element={<map />} />
+            <Route path="/map" element={<Map countries={countries} />} />
             <Route path="/Singalong" element={<Video />} />
           </Routes>
         </Router>
