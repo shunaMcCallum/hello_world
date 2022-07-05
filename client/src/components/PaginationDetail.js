@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { Howl } from 'howler';
 
 function PaginationDetail({ country, currentPage }) {
 
-    // the next 5 functions determine what data is displayed on each page of the PaginationContainer
+    const soundSrc = '/mexico.mp3';  //  "/somalia.mp3"
+    const soundSrc2 = '/hola.mp3';  //  "/somalia.mp3"
+    let sound;
+
+    const playSound = (src) => {
+        sound = new Howl({ src });
+        sound.play();                     // console.log(sound);
+    };
+    const stopSound = (src) => {
+        sound.stop();
+    }
+
+    // the next 5 functions determine what data is displayed on each page of the PaginationContaine
     const getPageOneData = () => {
         return (
             <div className="pagination-detail">
@@ -27,10 +40,15 @@ function PaginationDetail({ country, currentPage }) {
 
     const getPageThreeData = () => {
         return (
+            <>
             <div className="pagination-detail">
                 <h2>Flag</h2>
                 <p>{country.flags.meaning}</p>
             </div>
+                <button onClick={() => playSound(soundSrc)}> National Anthem </button>
+                <button onClick={() => playSound(soundSrc2)}> Say Hello </button>
+                <button onClick={() => stopSound(soundSrc)}> Stop </button>
+            </>
         )
     };
 

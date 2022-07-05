@@ -36,6 +36,7 @@ function App() {
           </Routes>
         </Router>
       </div> :
+
         <div className="countries" id="cloud-intro-stop">
           <button className="background-button" onClick={toggleBackground}>Start Moving Background</button>
           <Router>
@@ -45,7 +46,6 @@ function App() {
             </Routes>
           </Router>
         </div>}
-      
       </div>
   );
 }

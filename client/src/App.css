@@ -218,3 +218,27 @@ p {
   padding: 3px;
   /* color: #1D1D1D; */
 }
+
+
+
+.audio-control {
+  opacity: 0.5;
+  margin-right: 10px;
+  width: 60px;
+}
+
+.playing {
+  opacity: 0.8
+}
+
+.song {
+  border-bottom: 1px solid #999;
+  width: 75%;
+  margin: 0 auto 20px auto;
+  padding-bottom: 20px;
+}
+
+/* paginationDetail */
+.back-button {
+  width: auto;
+}
