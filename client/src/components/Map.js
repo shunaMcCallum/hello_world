@@ -16,7 +16,7 @@ const Map = ({ countries }) => {
                     <p>
                         {country.name.common}
                         <p>Population:</p>
-                        {country.population}
+                        {country.population.toLocaleString()}
                     </p>
                 </Popup>
 

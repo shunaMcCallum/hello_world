@@ -73,15 +73,6 @@ li a {
   letter-spacing: 1px;
 }
 
-/* home.js */
-header {
-
-  background-color: white;
-  border-radius: 0 0 85% 85% / 10%;
-}
-
-
-
 
 
 /* NavBar.js */
@@ -91,7 +82,7 @@ header {
   /* -webkit-text-stroke-color: #1a48a0; */
   padding: 12px;
   color: #C8102E;
-  font-size: 120px;
+  font-size: 80px;
   letter-spacing: 8px;
   /* background-image: linear-gradient(to left, violet, green, blue, yellow, orange, red);
   -webkit-background-clip: text;
