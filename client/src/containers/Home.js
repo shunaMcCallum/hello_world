@@ -5,7 +5,7 @@ import UserService from '../services/UserService';
 import NavBar from "../components/NavBar";
 
 
-const Home = ({ user, toggleBackground }) => {
+const Home = ({ user }) => {
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
@@ -39,9 +39,6 @@ const Home = ({ user, toggleBackground }) => {
         user.countries_studied.push(country)
         UserService.putUser(user._id, { countries_studied: user.countries_studied })
         UserService.getUsers()
-        // .then((data) => {
-        //     setUsers(data)
-        // });
         getCountries()
     }
 
@@ -56,9 +53,6 @@ const Home = ({ user, toggleBackground }) => {
         user.countries_studied = array;
         UserService.putUser(user._id, { countries_studied: user.countries_studied })
         UserService.getUsers()
-        // .then((data) => {
-        //     setUsers(data)
-        // });
         getCountries()
     }
 
@@ -66,19 +60,14 @@ const Home = ({ user, toggleBackground }) => {
         window.location.reload();
     }
 
-    const stopBackground = () => {
-        toggleBackground();
-    }
-
     return (
         <div>
             <NavBar handleClick={handleClick} />
-            {/* <button onClick={stopBackground}>Stop Moving Background</button> */}
             <div>
                 <h1>Fun with Flags!</h1>
             </div>
             {selectedCountry ? <PaginationContainer country={selectedCountry} pageLimit={5} /> :
-            <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
+                <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
         </div>
     )
 }
