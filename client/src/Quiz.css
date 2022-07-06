@@ -30,6 +30,7 @@
   color: #012169;
   letter-spacing: 8px;
   font-size: 40px;
+  text-shadow: 4px 2px white;
 }
 
 
@@ -177,14 +178,6 @@
     min-height: 310px;
     box-shadow: 10px 10px 42px 10px rgba(50, 50, 50, 50); 
     background-color: lightblue;
-    
-    /* text-align: center;
-
-
-    justify-content: center; */
-  /* justify-content: flex-start; */
-
-
 }
 
 .correct {
@@ -206,15 +199,17 @@ button svg {
 .score-section {
   font-family: 'rocketship';
   font-size: 70px;
+  text-shadow: 4px 2px white;
 
   margin-top: -100px;
   color: #012169;
 
   border-style: solid;
   border-radius: 10px;
+  border-color:fuchsia;
   width: auto;
   min-height: 310px;
-  box-shadow: 10px 10px 42px 10px rgba(50, 50, 50, 50);
+  box-shadow: 0px 0px 35px 16px fuchsia;
   background-color: lightblue;
   padding-left: 40px;
   padding-right: 40px;
