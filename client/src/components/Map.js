@@ -12,17 +12,12 @@ const Map = ({ countries }) => {
 
     const markers = countries.map((country) => {
         return (
-
-
-
             <Marker position={country.latlng} icon={new Icon({ iconUrl: markerIconPng, iconSize: [25, 41], iconAnchor: [12, 41] })}>
                 <Popup className="popup">
                     <p>
                         {country.name.common}
                         <p>Population:</p>
-
                         {country.population.toLocaleString()}
-
                     </p>
                 </Popup>
 

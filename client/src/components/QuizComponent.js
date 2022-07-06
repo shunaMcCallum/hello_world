@@ -71,12 +71,9 @@ import NavBar from "../components/NavBar";
 			{showScore ? (
 				<div className='score-section'>
 					You scored {score} out of {questions.length}
-				</div>
-				
-			
+				</div>	
 			) : ( 
 				<>	
-				
 				<div className='border'>
 					<div className='question-section'>
 						<div className='question-count'>
