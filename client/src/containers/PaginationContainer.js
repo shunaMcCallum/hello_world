@@ -48,25 +48,25 @@ function PaginationContainer({ country, pageLimit }) {
             <div>
                 <PaginationDetail country={country} currentPage={currentPage} />
             </div>
-            <div className="buttons">
+            <div className="pagination-buttons-container">
                 <div className="pagination-button">
                     {/* previous button - triggers the goToPreviousPage function when clicked */}
-                    <button id="button-detail" onClick={goToPreviousPage}>prev</button>
+                    <button className="button-style" id="button1" onClick={goToPreviousPage}>Prev</button>
                 </div>
                 <div className="pagination-button">
                     {/* numbered navigation buttons - each button triggers the changePage button when clicked
                 the getPaginationGroup function is run here to determine which numbers are displayed on the buttons */}
                     {getPaginationGroup().map((item, index) => (
-                        <button id="button-detail" key={index} onClick={changePage}><span>{item}</span></button>
+                        <button className="button-style" id="button2" key={index} onClick={changePage}><span>{item}</span></button>
                     ))}
                 </div>
                 <div className="pagination-button">
                     {/* next button - triggers the goToNextPage function when clicked */}
-                    <button id="button-detail" onClick={goToNextPage}>next</button>
+                    <button className="button-style" id="button3" onClick={goToNextPage}>Next</button>
                 </div>
             </div>
             <div className="back-button">
-                <button id="button-detail" onClick={() => window.location.reload()}>Back</button>
+                <button className="button-style" id="back-button" onClick={() => window.location.reload()}>Back</button>
             </div>
         </div>
     );

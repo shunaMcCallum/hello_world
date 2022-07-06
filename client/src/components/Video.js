@@ -6,13 +6,13 @@ const Video = () => {
 
 
     return (
-        <div>
+        <div> 
             <NavBar />
             <div >
                 <div>
                     <h1 className="fun-title">A Sing-a-long!</h1>
                 </div>
-                <div className="video">
+                <div className="video-container">
                     <ReactPlayer url="https://www.youtube.com/watch?v=V1508wboZXk" controls={true} />
                 </div>
             </div>

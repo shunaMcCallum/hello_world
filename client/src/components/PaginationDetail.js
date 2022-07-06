@@ -9,9 +9,9 @@ function PaginationDetail({ country, currentPage }) {
 
     const playSound = (src) => {
         sound = new Howl({ src });
-        sound.play();                     
+        sound.play();  
     };
-    const stopSound = (src) => {
+    const stopSound = () => {
         sound.stop();
     }
 
@@ -20,10 +20,10 @@ function PaginationDetail({ country, currentPage }) {
         return (
             <div className="pagination-detail">
                 <h2>Welcome to {country.name.common}</h2>
-                <p>{country.name.common}'s official name is {country.name.official}</p>
-                <p>It has a population of {country.population} people.</p>
-                <p>The capital city is {country.capital}.</p>
-                <p>{country.name.common} is located in the continent of {country.continent}.</p>
+                <p>{country.name.common}'s <b>official name</b> is {country.name.official}</p>
+                <p>It has a <b>population</b> of {country.population} people.</p>
+                <p>The <b>capital city</b> is {country.capital}.</p>
+                <p>{country.name.common} is located in the <b>continent</b> of {country.continent}.</p>
                 <img className="pagination-image" src={country.name.img} />
             </div>
         )
@@ -35,12 +35,15 @@ function PaginationDetail({ country, currentPage }) {
                 <h2>Audio</h2>
                 <h4>National Anthem</h4>
                 <p>Click the button below to hear {country.name.common}'s national anthem!</p>
-                <button onClick={() => playSound(soundSrc)}> National Anthem </button>
-                <button onClick={() => stopSound(soundSrc)}> Stop </button>
-
+                <div className="audio-button-container">
+                    <button id="national-anthem-button" className="button-style" onClick={() => playSound(soundSrc)}> Play National Anthem </button>
+                    <button id="stop-button" className="button-style" onClick={() => stopSound()}> Stop National Anthem </button>
+                </div>
                 <h4>Saying Hello</h4>
                 <p>In {country.name.common}, to say "hello" you say "{country.hello}". Click the button below to hear how this sounds!</p>
-                <button onClick={() => playSound(soundSrc2)}> Say Hello </button>
+                <div className="audio-button-container">
+                    <button id="hello-button" className="button-style" onClick={() => playSound(soundSrc2)}> Say Hello </button>
+                </div>
             </div>
         )
     };
