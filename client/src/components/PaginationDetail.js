@@ -21,7 +21,7 @@ function PaginationDetail({ country, currentPage }) {
             <div className="pagination-detail">
                 <h2>Welcome to {country.name.common}</h2>
                 <p>{country.name.common}'s <b>official name</b> is {country.name.official}</p>
-                <p>It has a <b>population</b> of {country.population} people.</p>
+                <p>It has a <b>population</b> of {country.population.toLocaleString()} people.</p>
                 <p>The <b>capital city</b> is {country.capital}.</p>
                 <p>{country.name.common} is located in the <b>continent</b> of {country.continent}.</p>
                 <img className="pagination-image" src={country.name.img} />

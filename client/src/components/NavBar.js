@@ -31,7 +31,7 @@ const NavBar = ({ handleClick }) => {
             <div>
                 <header>
                     <h1 className="headline">
-                        Hello, World! £
+                        £ Hola, Welt! £
                     </h1>
                 </header>
             </div>

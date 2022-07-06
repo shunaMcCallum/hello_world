@@ -64,8 +64,7 @@ import NavBar from "../components/NavBar";
 		return (
 		<>
 		<NavBar />
-			<h1 className='Quiz-title'>Test your knowledge:</h1>
-			<h2 className='Quiz-subtitle'>What have you learned today?</h2>
+			<h1 className='Quiz-title'>What have you learned today?</h1>
 			<p className='Quiz-paragraph'>Below is a four question quiz that will allow you to test your knowledge and see what you can remember about your favourite country! Take your time answering.....there may be a few tricks along the way!.</p>
 		<div className='quizapp'>
 		

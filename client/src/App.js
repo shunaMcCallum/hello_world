@@ -53,7 +53,9 @@ function App() {
       </div> :
 
         <div className="countries" id="cloud-intro-stop">
-          <button className="button-style" onClick={toggleBackground}>Start Clouds</button>
+          <div className="background-button-container">
+            <button className="button-style" onClick={toggleBackground}>Start Clouds</button>
+          </div>
           <Router>
             <Routes>
               <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />
