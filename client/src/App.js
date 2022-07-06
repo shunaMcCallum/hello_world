@@ -11,9 +11,7 @@ import Map from "./components/Map.js";
 function App() {
 
   const [users, setUsers] = useState([]);
-
   const [countries, setCountries] = useState([])
-
   const [background, setBackground] = useState(true);
 
 
@@ -30,8 +28,6 @@ function App() {
       .then(data => setCountries(data));
   }, [])
 
-
-
   const toggleBackground = () => {
     if (background === true) {
       setBackground(false);
@@ -40,13 +36,12 @@ function App() {
     }
   }
 
-
   return (
     <div className="container">
       {background ? <div className="countries" id="cloud-intro">
         <Router>
           <div className="background-button-container">
-            <button className="background-button" onClick={toggleBackground}>Stop Clouds</button>
+            <button className="button-style" onClick={toggleBackground}>Stop Clouds</button>
           </div>
           <Routes>
             <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
@@ -58,7 +53,7 @@ function App() {
       </div> :
 
         <div className="countries" id="cloud-intro-stop">
-          <button className="background-button" onClick={toggleBackground}>Start Clouds</button>
+          <button className="button-style" onClick={toggleBackground}>Start Clouds</button>
           <Router>
             <Routes>
               <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />

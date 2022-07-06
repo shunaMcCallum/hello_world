@@ -4,7 +4,7 @@ import PaginationContainer from './PaginationContainer.js';
 import UserService from '../services/UserService';
 import NavBar from "../components/NavBar";
 
-const Home = ({ user, setUsers }) => {
+const Home = ({ user }) => {
 
     const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
@@ -18,6 +18,11 @@ const Home = ({ user, setUsers }) => {
             .then(res => res.json())
             .then(data => setCountries(data));
     }
+
+    // function for sorting the countries alphabetically by its "name.common" key
+    const sortedCountries = countries.sort(function (a, b) {
+        return a.name.common.localeCompare(b.name.common)
+    })
 
     // function links to ListItem component - when an item is clicked it runs this function
     const onCountryClick = (country) => {
@@ -53,7 +58,6 @@ const Home = ({ user, setUsers }) => {
         user.countries_studied = array;
         UserService.putUser(user._id, { countries_studied: user.countries_studied })
         UserService.getUsers()
-
         getCountries()
     }
 
@@ -65,18 +69,14 @@ const Home = ({ user, setUsers }) => {
         <div>
             <NavBar handleClick={handleClick} />
             <div>
-                <h1>Fun with Flags!</h1>
+                <h1 className="fun-title">Fun with Flags!</h1>
                 <div>
-                    {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : <CountryList countries={countries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
+                    {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> : <CountryList countries={sortedCountries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied} handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
                 </div>
             </div>
 
+
         </div>
-
-
-
-
-
     )
 }
 

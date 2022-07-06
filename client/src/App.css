@@ -5,6 +5,12 @@
 }
 
 @font-face {
+  font-family: "rocketship";
+  /*Can be any text*/
+  src: url("./fonts/Supersonic Rocketship 2.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "crayon";
   /*Can be any text*/
   src: url("./fonts/ColoredCrayons-7wPR 2.ttf") format("truetype");
@@ -26,6 +32,37 @@
   font-family: "bloone";
   /*Can be any text*/
   src: url("./fonts/KingthingsBloone-3926.ttf") format("truetype");
+}
+
+/* ALL BUTTONS */
+.button-style {
+  background-color: rgb(236, 234, 234);
+  color: #1D1D1D;
+
+  border-radius: 7px;
+  border-style: solid;
+  border-color: rgb(236, 234, 234);
+
+  padding: 3px;
+  margin: 10px;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: small;
+
+  width: auto;
+}
+
+/* ALL BUTTONS */
+.button-style:hover {
+  background-color: #ddd;
+  border-color: #ddd;
+  box-shadow: 4px 6px 10px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* ALL BUTTONS */
+.button-style:active {
+  transform: translateX(1.5px) translateY(1.5px);
 }
 
 /* NavBar.js */
@@ -58,6 +95,7 @@ li a {
 
 /* NavBar.js */
 .NavBar {
+  padding: 1px;
   background-color: white;
   text-align: left;
   text-transform: uppercase;
@@ -66,22 +104,30 @@ li a {
   letter-spacing: 1px;
 }
 
-/* home.js */
-header {
-  background-color: white;
-  padding: 10px;
-  border-radius: 0 0 85% 85% / 30%;
+/* NavBar.js */
+.headline {
+  font-family: "rocketship";
+  /* -webkit-text-stroke-width: 1px; */
+  /* -webkit-text-stroke-color: #1a48a0; */
+  padding: 12px;
+  color: #C8102E;
+  font-size: 80px;
+  letter-spacing: 8px;
+  /* background-image: linear-gradient(to left, violet, green, blue, yellow, orange, red);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  text-shadow: 4px 2px black;
 }
 
 /* home.js */
-.headline {
-  font-family: "crayon";
-  /* -webkit-text-stroke-width: 1px; */
-  /* -webkit-text-stroke-color: #1a48a0; */
-  color: blue;
-  font-size: 70px;
-  letter-spacing: 5px;
-
+.fun-title {
+  font-family: "rocketship";
+  padding: 80px;
+  color: #012169;
+  letter-spacing: 8px;
+  font-size: 60px;
 }
 
 /* listitem.js */
@@ -100,13 +146,26 @@ header {
   width: 320px;
 }
 
-/* app.js */
-/* .background {
-  background-image: url('./images/cloud_background.jpg');
-  background-size: contain;
-  padding-bottom: 50px;
-  min-height: 1326.690px;
-} */
+/* listitem.js */
+.flag-image:hover {
+  box-shadow: 6px 8px 12px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* listitem.js */
+.button-style:active {
+  transform: translateX(1.5px) translateY(1.5px);
+}
+
+/* listitem.js */
+.homepage-h2:hover {
+  cursor: default;
+  color: rgb(62, 62, 62);
+}
+
+/* listitem.js */
+.star > path {
+  color:#ffee15;
+}
 
 /* app.js */
 .container {
@@ -152,64 +211,39 @@ header {
 /* app.js */
 h1 {
   font-family: "Montserrat", sans-serif;
-  color: #1d1d1db3;
+  color: black;
 }
 
 /* app.js */
 h2 {
   font-family: "Montserrat", sans-serif;
-  color: #1d1d1db3;
+  color: black;
   font-weight: bold;
 }
 
 /* app.js */
 .background-button-container {
-  padding-top: 10px;
-  padding-left: 5px;
-}
-
-/* app.js */
-.background-button {
-  background-color: rgb(236, 234, 234);
-  border-radius: 7px;
+  border-color: white;
   border-style: solid;
-  border-color: rgb(236, 234, 234);
-  padding: 3px;
-  color: #1D1D1D;
-  width: auto;
-  margin: 10px;
-  font-size: small;
-}
-
-.background-button:hover {
-  background-color: #ddd;
-  color: #1D1D1D;
+  background-color: white;
 }
 
 /* home.js */
 header {
   background-color: white;
   padding: 10px;
-  border-radius: 0 0 85% 85% / 30%;
+  border-radius: 0 0 85% 85% / 60%;
 }
 
-/* home.js */
-.headline {
-  font-family: "bloone";
-  color: #ffee15;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #1a48a0;
-  font-size: 50px;
-}
 
 /* home.js */
-.user-name {
+/* .user-name {
   font-family: airways;
   text-align: left;
   padding-left: 100px;
   font-size: 40px;
   color: #1d1d1db3;
-}
+} */
 
 /* listitem.js */
 .item {
@@ -228,31 +262,24 @@ header {
 }
 
 /* listitem.js */
-.studied-list-button {
-  background-color: rgb(236, 234, 234);
-  border-radius: 7px;
-  border-style: solid;
-  border-color: rgb(236, 234, 234);
-  padding: 3px;
-  color: #1D1D1D;
-}
-
-/* listitem.js */
-.select-button {
-  padding: 200px;
+#studied-list-button {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* map.js */
 .map {
   /* padding-top: 100px; */
   height: 600px;
-  width: 100%;
+  width: 80%;
   left: 50%;
   transform: translate(-50%, 0%);
   border: solid;
   border-color: #1d1d1db3;
   font-family: "Montserrat", sans-serif;
   color: #1d1d1db3;
+  margin-bottom: 300px;
+
 
 }
 
@@ -273,10 +300,8 @@ p {
 }
 
 /* paginationContainer.js */
-.buttons {
+.pagination-buttons-container {
   display: flex;
-  margin-left: 39.5%;
-  margin-right: 50%;
   margin-bottom: 20px;
 }
 
@@ -284,30 +309,55 @@ p {
 .pagination-button {
   display: flex;
   padding: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -15px;
 }
 
-/* /* paginationContainer.js */
-#button-detail {
+/* paginationContainer */
+#button1 {
+  margin-left: auto;
+  margin-right: -36rem;
+}
+
+/* paginationContainer */
+#button2 {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+/* paginationContainer */
+#button3 {
+  margin-left: -36rem;
+  margin-right: auto;
+}
+
+/* paginationContainer */
+.back-button {
+  padding-bottom: 20px;
+}
+
+/* paginationContainer */
+#back-button {
   width: auto;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 3px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* paginationDetail.js */
 .pagination-detail>h2,
-h4,
-p {
+h4, p, img {
   color: black;
-  margin-left: 30vh;
-  margin-right: 30vh;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100vh;
 }
 
 /* paginationDetail.js */
 .pagination-image {
   height: 400px;
   width: 400px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 /* paginationDetail.js */
@@ -330,16 +380,32 @@ p {
   padding-bottom: 20px;
 }
 
-/* paginationDetail */
-.back-button {
-  width: auto;
-  margin-bottom: 40px;
-  margin-left: 48%;
+/* video.js */
+.video-container {
+  margin-top: 60px;
+  min-height: 90vh;
 }
 
 /* video.js */
 .video {
-  margin-top: 50px;
-  margin-left: 27%;
-  min-height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* paginationDetail */
+#national-anthem-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* paginationDetail */
+#stop-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* paginationDetail */
+#hello-button {
+  margin-left: auto;
+  margin-right: auto;
 }
