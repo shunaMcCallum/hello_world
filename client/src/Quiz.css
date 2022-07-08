@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Lobster";
+  /*Can be any text*/
+  src: url("./fonts/Lobster-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Amatic";
+  /*Can be any text*/
+  src: url("./fonts/AmaticSC-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "rocketship";
+  /*Can be any text*/
+  src: url("./fonts/Supersonic Rocketship 2.ttf") format("truetype");
+}
+
+
+
+.Quiz-title {
+
+  /* font-size: 130px;
+
+  font-family: "Verdana", cursive, sans-serif;
+  font-family: "Lobster";
+  color: black; */
+  font-family: "rocketship";
+  padding: 30px;
+  color: #012169;
+  letter-spacing: 8px;
+  font-size: 40px;
+  text-shadow: 4px 2px white;
+}
+
+
+
+.Quiz-subtitle{
+  font-size: 35px;
+  color: black;
+  font-family: "rocketship";
+
+}
+
+.Quiz-paragraph{
+  font-size: 20px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold;
+  margin-bottom: -130px;
+  
+}
+
+.quizapp {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* * {
+    font-family: "Verdana", cursive, sans-serif;
+    color: #ffffff;
+  } */
+
+.quizapp {
+
+    /* background-color: #7cc6fe; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+  } 
+  
+  .quizapp {
+    /* width: 450px; */
+    /* min-height: 800px; */
+    height: min-content;
+    border-radius: 50px;
+    padding: 20px;
+    /* box-shadow: 10px 10px 42px 10px rgba(50, 50, 50, 50);  */
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 300px;
+    margin-right: 300px;
+    
+
+    
+  }
+  
+  .score-section {
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+  }
+  
+  
+   .question-section {
+    width: 100%;
+    position: relative;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+   
+   }
+  
+  .question-count {
+    margin-bottom: 20px;
+    border-radius: 100px;
+    
+  }
+  
+  .question-count span {
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .question-text {
+    margin-bottom: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+  }
+  
+  .timer-text {
+    background: rgb(230, 153, 12);
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 5px solid rgb(255, 189, 67);
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  
+  .answer-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+  }
+  
+  button {
+    width: 70%;
+    font-size: 20px;
+    color: black;
+    background-color: rgb(236, 234, 234);
+    border-radius: 15px;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    border-color: rgb(236, 234, 234);
+    cursor: pointer;
+    margin: 30px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+  }
+  
+  button:hover {
+    background-color: #ddd;
+    border-color: #ddd;
+    box-shadow: 4px 6px 10px 0 rgba(0, 0, 0, 0.24);
+  }
+  
+  button:active {
+    transform: translateX(1.5px) translateY(1.5px);
+  }
+  
+  .border{
+    border-style: solid;
+    border-radius: 10px;
+    width: 600px;
+    min-height: 310px;
+    box-shadow: 10px 10px 42px 10px rgba(50, 50, 50, 50); 
+    background-color: lightblue;
+}
+
+.correct {
+  background-color: #2f922f;
+}
+
+.incorrect {
+  background-color: #ff3333;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+.score-section {
+  font-family: 'rocketship';
+  font-size: 70px;
+  text-shadow: 4px 2px white;
+
+  margin-top: -100px;
+  color: #012169;
+
+  border-style: solid;
+  border-radius: 10px;
+  border-color:fuchsia;
+  width: auto;
+  min-height: 310px;
+  box-shadow: 0px 0px 35px 16px fuchsia;
+  background-color: lightblue;
+  padding-left: 40px;
+  padding-right: 40px;
+}
