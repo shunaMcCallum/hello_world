@@ -6,6 +6,11 @@ db.users.insertMany([
         "name": "Shuna",
         "email": "shuna.shuna@shuna.com",
         "countries_studied": []
+    },
+    {
+        "name": "Sushi",
+        "email": "sushi.sushia@meow.com",
+        "countries_studied": []
     }
 ])
 
@@ -793,8 +798,8 @@ db.countries.insertMany([
             "img": "https://geology.com/world/mexico-map.gif"
         },
         "currencies": {
-                "name": "Mexican peso",
-                "symbol": "$"
+            "name": "Mexican peso",
+            "symbol": "$"
         },
         "capital": "Mexico City",
         "languages": {
