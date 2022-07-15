@@ -1,11 +1,12 @@
 import React from "react";
 import '../App.css';
-import { MapContainer, TileLayer, useMap, Marker, Popup, Tooltip, CircleMarker } from 'react-leaflet';
-import markerIconPng from "leaflet/dist/images/marker-icon.png";
+// import { MapContainer, TileLayer, useMap, Marker, Popup, Tooltip, CircleMarker } from 'react-leaflet';
+// import markerIconPng from "leaflet/dist/images/marker-icon.png";
 // import markerIconPng from "https://www.google.com/search?q=emoji+smilie+png&tbm=isch&ved=2ahUKEwj9rfH_u-H4AhWLw4UKHaUAAwUQ2-cCegQIABAA&oq=emoji+smilie+png&gs_lcp=CgNpbWcQAzIGCAAQHhAIOgQIIxAnOgcIABCxAxBDOgQIABBDOgsIABCABBCxAxCDAToKCAAQsQMQgwEQQzoICAAQgAQQsQM6BQgAEIAEOgQIABAeOgYIABAKEBhQ1QRY4h5g2SFoAHAAeACAAUOIAcwFkgECMTKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=2AjEYv3hKYuHlwSlgYwo&bih=734&biw=1440#imgrc=-pi95dUME9mAqM";
-import { Icon } from "leaflet";
+// import { Icon } from "leaflet";
 import { Chart } from 'react-google-charts';
 import NavBar from "../components/NavBar";
+import '../styling/Map.css';
 
 
 const Map = ({ countries }) => {
@@ -39,7 +40,7 @@ const Map = ({ countries }) => {
 
 
     return (
-        <>
+        <div className="map-page-container">
             {/* <div>
                 <NavBar />
             </div>
@@ -59,6 +60,10 @@ const Map = ({ countries }) => {
             </div> */}
 
             <div>
+                <NavBar />
+            </div>
+            <h1 className="fun-title">Explore a Map of the World!</h1>
+            <div className="map-page-content">
                 <Chart
                     chartEvents={[
                         {
@@ -73,14 +78,14 @@ const Map = ({ countries }) => {
                         },
                     ]}
                     chartType="GeoChart"
-                    width="100%"
-                    height="400px"
+                    width="150vh"
+                    height="70vh"
                     data={data4}
                     options = {options}
                 />
             </div>
 
-        </>
+        </div>
     )
 }
 
