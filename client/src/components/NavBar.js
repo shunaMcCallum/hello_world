@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ handleClick }) => {
+const NavBar = () => {
 
 
     return (
@@ -11,7 +11,7 @@ const NavBar = ({ handleClick }) => {
                 <ul>
 
                     <li>
-                        <Link to="/" onClick={handleClick}>Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
 
                     <li>
@@ -19,7 +19,7 @@ const NavBar = ({ handleClick }) => {
                     </li>
 
                     <li>
-                        <Link to="/map">Map</Link>
+                        <Link to="/Map">Map</Link>
                     </li>
                     <li>
                         <Link to="/Singalong">Singalong</Link>

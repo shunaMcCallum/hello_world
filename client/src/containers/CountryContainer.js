@@ -4,20 +4,20 @@ import PaginationContainer from './PaginationContainer.js';
 import UserService from '../services/UserService';
 import NavBar from "../components/NavBar";
 
-const Home = ({ user }) => {
+const CountryContainer = ({ user, countries, getCountries }) => {
 
-    const [countries, setCountries] = useState([]);
+    // const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
-    useEffect(() => {
-        getCountries();
-    }, [])
+    // useEffect(() => {
+    //     getCountries();
+    // }, [])
 
-    const getCountries = () => {
-        fetch("http://localhost:9000/api/countries")
-            .then(res => res.json())
-            .then(data => setCountries(data));
-    }
+    // const getCountries = () => {
+    //     fetch("http://localhost:9000/api/countries")
+    //         .then(res => res.json())
+    //         .then(data => setCountries(data));
+    // }
 
     // function for sorting the countries alphabetically by its "name.common" key
     const sortedCountries = countries.sort(function (a, b) {
@@ -83,7 +83,7 @@ const Home = ({ user }) => {
 }
 
 
-export default Home;
+export default CountryContainer;
 
 
 
