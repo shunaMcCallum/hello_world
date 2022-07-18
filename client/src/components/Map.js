@@ -43,19 +43,19 @@ const Map = ({ countries }) => {
             <div>
                 <NavBar />
             </div>
-            <h1 className="fun-title">Explore a map of the world!</h1>
+            <div>
+                <h1 className="fun-title">Explore a map of the world!</h1>
+            </div>
             
-            <div className="map-page-content">
-                <MapContainer center={[51.505, -0.09]} zoom={2} scrollWheelZoom={true}>
+                <MapContainer className="leaflet-map" center={[51.505, -0.09]} zoom={2} scrollWheelZoom={true}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     {markers}
-                    </MapContainer>
-            </div>
+                </MapContainer>
 
-            <div className="map-page-content">
+            <div className="google-chart-map">
                 <Chart
                     chartEvents={[
                         {
