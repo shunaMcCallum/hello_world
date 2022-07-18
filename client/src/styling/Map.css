@@ -7,4 +7,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 15vh;
+    height: 70vh;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
 }

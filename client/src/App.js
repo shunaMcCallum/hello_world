@@ -13,6 +13,7 @@ function App() {
   const [users, setUsers] = useState([]);
   const [countries, setCountries] = useState([])
   const [background, setBackground] = useState(true);
+  let offset = 0;
 
 
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
       .then(res => res.json())
       .then(data => setCountries(data));
   }, [])
+
 
   const toggleBackground = () => {
     if (background === true) {
