@@ -15,14 +15,18 @@ const NavBar = () => {
                     </li>
 
                     <li>
-                        <Link to="/Quiz">Quiz</Link>
+                        <Link to="/countries">Countries</Link>
                     </li>
 
                     <li>
-                        <Link to="/Map">Map</Link>
+                        <Link to="/quiz">Quiz</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/map">Map</Link>
                     </li>
                     <li>
-                        <Link to="/Singalong">Singalong</Link>
+                        <Link to="/singalong">Singalong</Link>
 
                     </li>
                 </ul>

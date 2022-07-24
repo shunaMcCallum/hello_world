@@ -4,20 +4,20 @@ import PaginationContainer from './PaginationContainer.js';
 import UserService from '../services/UserService';
 import NavBar from "../components/NavBar";
 
-const CountryContainer = ({ user, countries, getCountries }) => {
+const CountryContainer = ({ user }) => {
 
-    // const [countries, setCountries] = useState([]);
+    const [countries, setCountries] = useState([]);
     const [selectedCountry, setSelectedCountry] = useState(null);
 
-    // useEffect(() => {
-    //     getCountries();
-    // }, [])
+    useEffect(() => {
+        getCountries();
+    }, [])
 
-    // const getCountries = () => {
-    //     fetch("http://localhost:9000/api/countries")
-    //         .then(res => res.json())
-    //         .then(data => setCountries(data));
-    // }
+    const getCountries = () => {
+        fetch("http://localhost:9000/api/countries")
+            .then(res => res.json())
+            .then(data => setCountries(data));
+    }
 
     // function for sorting the countries alphabetically by its "name.common" key
     const sortedCountries = countries.sort(function (a, b) {
@@ -61,21 +61,17 @@ const CountryContainer = ({ user, countries, getCountries }) => {
         getCountries()
     }
 
-    const handleClick = () => {
-        window.location.reload();
-    }
+
 
     return (
         <div>
-            <NavBar handleClick={handleClick} />
-            <div>
+            <NavBar />
                 <h1 className="fun-title">Fun with Flags!</h1>
                 <div>
                     {selectedCountry ? <PaginationContainer country={selectedCountry} title="Paginated Content" pageLimit={5} /> :
                         <CountryList countries={sortedCountries} onCountryClick={onCountryClick} handleCountryStudied={handleCountryStudied}
                         handleRemoveCountryStudied={handleRemoveCountryStudied} user={user} />}
                 </div>
-            </div>
 
 
         </div>
