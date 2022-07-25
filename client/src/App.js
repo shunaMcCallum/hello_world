@@ -6,7 +6,7 @@ import Video from './components/Video';
 import './Quiz.css';
 import './App.css';
 import Map from "./components/Map.js";
-import HomePage from "./containers/HomePage";
+import HomePage from "./components/HomePage";
 import Login from "./components/Login";
 import UserService from "./services/UserService";
 
@@ -53,9 +53,11 @@ function App() {
       {background ?
         <div id="cloud-intro">
           <div className="background-button-container">
+            {loggedIn ? <button className="button-style" onClick={logOut}>Log Out</button> : 
+            <div>
             <button className="button-style" onClick={toggleBackground}>Stop Clouds</button>
-            {loggedIn ? <button className="button-style" onClick={logOut}>Log Out</button> : <></>}
-            {console.log(selectedUser)}
+            <h1 className="headline">£ Hello, World! £</h1>
+            </div>}
           </div>
           <Router>
             <Routes>
@@ -71,8 +73,13 @@ function App() {
         <div id="cloud-intro-stop">
           <div className="background-button-container">
             <button className="button-style" onClick={toggleBackground}>Start Clouds</button>
-            {selectedUser ?
-              <button className="button-style">Log Out</button> : <></>}
+            <h1 className="headline">£ Hello, World! £</h1>
+            {loggedIn ?
+              <button className="button-style">Log Out</button> : 
+              <div>
+                <button className="button-style" onClick={toggleBackground}>Stop Clouds</button>
+                <h1 className="headline">£ Hello, World! £</h1>
+              </div>}
           </div>
           <Router>
             <Routes>

@@ -1,7 +1,7 @@
 .home-page-container{
     min-height: 100vh;
+}
 
-    /* border-style: solid;
-    border-width: 2px;
-    border-color: black; */
+.home-page-para {
+    font-size: large;
 }

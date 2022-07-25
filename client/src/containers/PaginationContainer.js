@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PaginationDetail from '../components/PaginationDetail.js';
+import '../styling/PaginationContainer.css';
 
 
 function PaginationContainer({ country, pageLimit }) {
@@ -64,9 +65,6 @@ function PaginationContainer({ country, pageLimit }) {
                     {/* next button - triggers the goToNextPage function when clicked */}
                     <button className="button-style" id="button3" onClick={goToNextPage}>Next</button>
                 </div>
-            </div>
-            <div className="back-button">
-                <button className="button-style" id="back-button" onClick={() => window.location.reload()}>Back</button>
             </div>
         </div>
     );

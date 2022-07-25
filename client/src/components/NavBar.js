@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../styling/NavBar.css';
 
 const NavBar = () => {
 
@@ -35,7 +36,7 @@ const NavBar = () => {
             <div>
                 <header>
                     <h1 className="headline">
-                        £ Hola, Welt! £
+                        £ Hello, World! £
                     </h1>
                 </header>
             </div>

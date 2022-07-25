@@ -10,30 +10,6 @@
   src: url("./fonts/Supersonic Rocketship 2.ttf") format("truetype");
 }
 
-@font-face {
-  font-family: "crayon";
-  /*Can be any text*/
-  src: url("./fonts/ColoredCrayons-7wPR 2.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "toy-story";
-  /*Can be any text*/
-  src: url("./fonts/GillSansUltraBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "backtoschool";
-  /*Can be any text*/
-  src: url("./fonts/BackToSchoolPersonalUseRegular-w1xX2.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "bloone";
-  /*Can be any text*/
-  src: url("./fonts/KingthingsBloone-3926.ttf") format("truetype");
-}
-
 /* ALL BUTTONS */
 .button-style {
   background-color: rgb(236, 234, 234);
@@ -65,63 +41,6 @@
   transform: translateX(1.5px) translateY(1.5px);
 }
 
-/* NavBar.js */
-li {
-  float: left;
-  display: block;
-  padding-right: 50px;
-  padding-top: 10px;
-  list-style-type: none;
-}
-
-/* NavBar.js */
-li a {
-  color: #1d1d1db3;
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  border-style: solid;
-  border-radius: 100px;
-  border-color: rgb(236, 234, 234);
-  padding: 10px;
-  background-color: rgb(236, 234, 234);
-}
-
-/* NavBar.js */
-.NavBar a:hover {
-  background-color: #ddd;
-  color: #1D1D1D;
-}
-
-/* NavBar.js */
-.NavBar {
-  padding: 10px;
-  background-color: white;
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 1px;
-}
-
-/* NavBar.js */
-.headline {
-  font-family: "rocketship";
-  /* -webkit-text-stroke-width: 1px; */
-  /* -webkit-text-stroke-color: #1a48a0; */
-  padding: 12px;
-  color: #C8102E;
-  font-size: 60px;
-  letter-spacing: 8px;
-  /* background-image: linear-gradient(to left, violet, green, blue, yellow, orange, red);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  color: transparent; */
-  text-shadow: 4px 2px black;
-}
-
-/* home.js */
 .fun-title {
   font-family: "rocketship";
   padding: 30px;
@@ -132,49 +51,6 @@ li a {
   text-shadow: 4px 2px white;
 }
 
-/* listitem.js */
-.item {
-  display: inline-block;
-  background-color: none;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  margin: 10px;
-}
-
-/* listitem.js */
-.flag-image {
-  height: 213px;
-  width: 320px;
-  box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* listitem.js */
-.flag-image:hover {
-  box-shadow: 0px 0px 20px 10px white;
-}
-
-#flag-picture:hover {
-  box-shadow: 0 0 0 0;
-}
-
-/* listitem.js */
-.button-style:active {
-  transform: translateX(1.5px) translateY(1.5px);
-}
-
-/* listitem.js */
-.homepage-h2:hover {
-  cursor: default;
-  color: rgb(62, 62, 62);
-}
-
-/* listitem.js */
-.star>path {
-  color: #ffee15;
-}
-
-/* app.js */
 .container {
   text-align: center;
 
@@ -189,7 +65,6 @@ li a {
   background-color: #66ccff;
 }
 
-/* app.js */
 #cloud-intro {
   position: relative;
   height: 100%;
@@ -197,14 +72,12 @@ li a {
   animation: wind 20s linear infinite;
 }
 
-/* app.js */
 #cloud-intro-stop {
   position: relative;
   height: 100%;
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
 }
 
-/* app.js */
 @keyframes wind {
   0% {
     background-position: 0 200px, 0 300px, 100px 250px;
@@ -215,128 +88,32 @@ li a {
   }
 }
 
-/* app.js */
 h1 {
   font-family: "Montserrat", sans-serif;
   color: black;
 }
 
-/* app.js */
 h2 {
   font-family: "Montserrat", sans-serif;
   color: black;
   font-weight: bold;
 }
 
-/* app.js */
 .background-button-container {
   border-color: white;
   border-style: solid;
   background-color: white;
 }
 
-/* home.js */
 header {
   background-color: white;
   padding: 10px;
   border-radius: 0 0 85% 85% / 20%;
 }
 
-/* listitem.js */
-.item {
-  display: inline-block;
-  background-color: none;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  margin: 10px;
-}
-
-/* listitem.js */
-.flag-image {
-  height: 213px;
-  width: 320px;
-}
-
-/* listitem.js */
-#studied-list-button {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 * {
   font-family: "Verdana", cursive, sans-serif;
   color: black;
-}
-
-/* paginationContainer */
-.pagination-container {
-  min-height: 90vh;
-}
-
-/* paginationContainer.js */
-.pagination-buttons-container {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-/* paginationContainer.js */
-.pagination-button {
-  display: flex;
-  padding: 3px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -15px;
-}
-
-/* paginationContainer */
-#button1 {
-  margin-left: auto;
-  margin-right: -36rem;
-}
-
-/* paginationContainer */
-#button2 {
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-/* paginationContainer */
-#button3 {
-  margin-left: -36rem;
-  margin-right: auto;
-}
-
-/* paginationContainer */
-.back-button {
-  padding-bottom: 20px;
-}
-
-/* paginationContainer */
-#back-button {
-  width: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* paginationDetail.js */
-.pagination-detail>h2,
-h4,
-p,
-img {
-  color: black;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100vh;
-}
-
-/* paginationDetail.js */
-.pagination-image {
-  height: 400px;
-  width: 400px;
-  margin-bottom: -10px;
-  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
 #map-picture {
@@ -360,26 +137,6 @@ img {
   padding: 10px 20px;
 }
 
-/* paginationDetail.js */
-.audio-control {
-  opacity: 0.5;
-  margin-right: 10px;
-  width: 60px;
-}
-
-/* paginationDetail.js */
-.playing {
-  opacity: 0.8
-}
-
-/* paginationDetail.js */
-.song {
-  border-bottom: 1px solid #999;
-  width: 75%;
-  margin: 0 auto 20px auto;
-  padding-bottom: 20px;
-}
-
 /* video.js */
 .video-container {
   margin-top: 60px;
@@ -390,22 +147,4 @@ img {
 .video {
   margin-left: 32.5%;
   /* margin-right: auto; */
-}
-
-/* paginationDetail */
-#national-anthem-button {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* paginationDetail */
-#stop-button {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* paginationDetail */
-#hello-button {
-  margin-left: auto;
-  margin-right: auto;
 }

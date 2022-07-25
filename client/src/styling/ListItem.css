@@ -1,0 +1,63 @@
+/* listitem.js */
+.item {
+    display: inline-block;
+    background-color: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+}
+
+/* listitem.js */
+.flag-image {
+    height: 213px;
+    width: 320px;
+    box-shadow: 3px 3px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* listitem.js */
+.flag-image:hover {
+    box-shadow: 0px 0px 20px 10px white;
+}
+
+#flag-picture:hover {
+    box-shadow: 0 0 0 0;
+}
+
+/* listitem.js */
+.button-style:active {
+    transform: translateX(1.5px) translateY(1.5px);
+}
+
+/* listitem.js */
+.homepage-h2:hover {
+    cursor: default;
+    color: rgb(62, 62, 62);
+}
+
+/* listitem.js */
+.star>path {
+    color: #ffee15;
+}
+
+/* listitem.js */
+.item {
+    display: inline-block;
+    background-color: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 10px;
+}
+
+/* listitem.js */
+.flag-image {
+    height: 213px;
+    width: 320px;
+}
+
+/* listitem.js */
+#studied-list-button {
+    margin-left: auto;
+    margin-right: auto;
+}

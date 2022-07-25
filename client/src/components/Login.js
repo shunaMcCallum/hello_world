@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
+import '../styling/Login.css';
 
 
 export default function Login({ users, setSelectedUser, selectedUser, loggedIn }) {
@@ -89,17 +90,25 @@ export default function Login({ users, setSelectedUser, selectedUser, loggedIn }
 
 
     return (
-        <div className="container">
+        <div className="login-container">
+
             {buttons ?
                 <div>
+              <h1 className="fun-title">Welcome!</h1>
+
+                <div className="login-buttons">
+                <p className="login-para">If you already have an account, hit Log in.</p>
+                    <p className="login-para">If you haven't signed up yet, where have you been?! Hit Sign up.</p>
+                
                     <button className="button-style" onClick={logInClick}>Log in</button>
                     <button className="button-style" onClick={signUpClick}>Sign up</button>
+                    </div>
                 </div> : null}
 
             {logIn ?
-                <div className="container">
-                    <h1>Please Log In</h1>
-                    <form onSubmit={handleSubmitLogIn}>
+                <div >
+                    <h1>Please Enter Your Log In Details</h1>
+                    <form className="login-form" onSubmit={handleSubmitLogIn}>
                         <label>
                             <p>Name</p>
                             <input type="text" onChange={e => setName(e.target.value)} />
@@ -111,16 +120,14 @@ export default function Login({ users, setSelectedUser, selectedUser, loggedIn }
                         </label>
                         {passwordNotOk ? <p>Password incorrect, please try again.</p> : null}
                         <div>
-                            <button className="button-style" type="submit">Log in</button>
+                            <button className="button-style" id="login-button" type="submit">Log in</button>
                         </div>
                     </form>
-                </div> :
-                <div>
-                </div>}
+                </div> : <div className="login-form-hidden"></div>}
 
             {signUp ?
-                <div className="container">
-                    <h1>Please Log In</h1>
+                <div className="login-form">
+                    <h1>Please Enter Your Details</h1>
                     <form onSubmit={handleSubmitSignUp}>
                         <label>
                             <p>Name</p>
@@ -131,12 +138,10 @@ export default function Login({ users, setSelectedUser, selectedUser, loggedIn }
                             <input type="password" onChange={e => setPassword(e.target.value)} />
                         </label>
                         <div>
-                            <button className="button-style" type="submit">Sign up</button>
+                            <button className="button-style" id="login-button" type="submit">Sign up</button>
                         </div>
                     </form>
-                </div> :
-                <div>
-                </div>}
+                </div> : <div className="login-form-hidden"></div>}
 
         </div>
     )
