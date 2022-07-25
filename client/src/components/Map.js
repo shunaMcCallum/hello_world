@@ -2,10 +2,10 @@ import React from "react";
 import '../App.css';
 import { MapContainer, TileLayer, useMap, Marker, Popup, Tooltip, CircleMarker } from 'react-leaflet';
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
-// import markerIconPng from "https://www.google.com/search?q=emoji+smilie+png&tbm=isch&ved=2ahUKEwj9rfH_u-H4AhWLw4UKHaUAAwUQ2-cCegQIABAA&oq=emoji+smilie+png&gs_lcp=CgNpbWcQAzIGCAAQHhAIOgQIIxAnOgcIABCxAxBDOgQIABBDOgsIABCABBCxAxCDAToKCAAQsQMQgwEQQzoICAAQgAQQsQM6BQgAEIAEOgQIABAeOgYIABAKEBhQ1QRY4h5g2SFoAHAAeACAAUOIAcwFkgECMTKYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=2AjEYv3hKYuHlwSlgYwo&bih=734&biw=1440#imgrc=-pi95dUME9mAqM";
 import { Icon } from "leaflet";
-
+import { Chart } from 'react-google-charts';
 import NavBar from "../components/NavBar";
+import '../styling/Map.css';
 
 
 const Map = ({ countries }) => {
@@ -25,27 +25,59 @@ const Map = ({ countries }) => {
         )
     })
 
+    const data2 = countries.map((country) => {
+      return [country.name.common, country.population]
+    })
+
+    const data4 = [["Country", "Population"], ...data2];
+
+    const options = {
+        colorAxis: { colors: ["#a4db88", "#448b20"] },
+        backgroundColor: "81d4fa",
+        datalessRegionColor: "white",
+    }
+
 
     return (
-        <>
+        <div className="map-page-container">
             <div>
                 <NavBar />
             </div>
-            <div >
-                <h1 className="fun-title">A map of the world!</h1>
-
-                <MapContainer className="map" center={[51.505, -0.09]} zoom={2} scrollWheelZoom={true}>
+            <div>
+                <h1 className="fun-title">Explore a map of the world!</h1>
+            </div>
+            
+                <MapContainer className="leaflet-map" center={[51.505, -0.09]} zoom={2} scrollWheelZoom={true}>
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
                     {markers}
-
-
-
                 </MapContainer>
+
+            <div className="google-chart-map">
+                <Chart
+                    chartEvents={[
+                        {
+                            eventName: "select",
+                            callback: ({ chartWrapper }) => {
+                                const chart = chartWrapper.getChart();
+                                const selection = chart.getSelection();
+                                if (selection.length === 0) return;
+                                const region = data4[selection[0].row + 1];
+                                console.log("Selected : " + region);
+                            },
+                        },
+                    ]}
+                    chartType="GeoChart"
+                    width="150vh"
+                    height="70vh"
+                    data={data4}
+                    options = {options}
+                />
             </div>
-        </>
+
+        </div>
     )
 }
 

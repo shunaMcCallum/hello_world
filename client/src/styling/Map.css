@@ -1,0 +1,25 @@
+.map-page-container {
+    min-height: 100vh;
+}
+
+.leaflet-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15vh;
+    height: 600px;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    border-color: #1d1d1db3;
+    font-family: "Montserrat", sans-serif;
+    color: #1d1d1db3;
+}
+
+.google-chart-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15vh;
+}

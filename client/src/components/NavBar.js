@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../styling/NavBar.css';
 
-const NavBar = ({ handleClick }) => {
+const NavBar = () => {
 
 
     return (
@@ -11,18 +12,22 @@ const NavBar = ({ handleClick }) => {
                 <ul>
 
                     <li>
-                        <Link to="/" onClick={handleClick}>Home</Link>
+                        <Link to="/">Home</Link>
                     </li>
 
                     <li>
-                        <Link to="/Quiz">Quiz</Link>
+                        <Link to="/countries">Countries</Link>
+                    </li>
+
+                    <li>
+                        <Link to="/quiz">Quiz</Link>
                     </li>
 
                     <li>
                         <Link to="/map">Map</Link>
                     </li>
                     <li>
-                        <Link to="/Singalong">Singalong</Link>
+                        <Link to="/singalong">Singalong</Link>
 
                     </li>
                 </ul>
@@ -31,7 +36,7 @@ const NavBar = ({ handleClick }) => {
             <div>
                 <header>
                     <h1 className="headline">
-                        £ Hola, Welt! £
+                        £ Hello, World! £
                     </h1>
                 </header>
             </div>
