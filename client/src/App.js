@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react";
-import Home from './containers/Home';
+import CountryContainer from './containers/CountryContainer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import QuizComponent from "./components/QuizComponent";
 import Video from './components/Video';
 import './Quiz.css';
 import './App.css';
 import Map from "./components/Map.js";
+import HomePage from "./components/HomePage";
+import Login from "./components/Login";
+import UserService from "./services/UserService";
 
 
 function App() {
 
-  const [users, setUsers] = useState([]);
-  const [countries, setCountries] = useState([])
   const [background, setBackground] = useState(true);
-  let offset = 0;
 
+  const [users, setUsers] = useState([]);
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [countries, setCountries] = useState([]);
+
+  const loggedIn = window.localStorage.getItem('loggedIn');
 
   useEffect(() => {
-    fetch("http://localhost:9000/api/users")
-      .then(res => res.json())
+    UserService.getUsers()
       .then(data => setUsers(data));
   }, [])
-
 
   useEffect(() => {
     fetch("http://localhost:9000/api/countries")
@@ -38,32 +41,53 @@ function App() {
     }
   }
 
+  const logOut = () => {
+    setSelectedUser(null);
+    window.localStorage.removeItem('loggedIn');
+    window.location.href = "/";
+  }
+
+
   return (
     <div className="container">
-      {background ? <div className="countries" id="cloud-intro">
-        <Router>
+      {background ?
+        <div id="cloud-intro">
           <div className="background-button-container">
+            {loggedIn ? <button className="button-style" onClick={logOut}>Log Out</button> : 
+            <div>
             <button className="button-style" onClick={toggleBackground}>Stop Clouds</button>
-          </div>
-          <Routes>
-            <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} toggleBackground={toggleBackground} />} />
-            <Route path="/Quiz" element={<QuizComponent />} />
-            <Route path="/map" element={<Map countries={countries} />} />
-            <Route path="/Singalong" element={<Video />} />
-          </Routes>
-        </Router>
-      </div> :
-
-        <div className="countries" id="cloud-intro-stop">
-          <div className="background-button-container">
-            <button className="button-style" onClick={toggleBackground}>Start Clouds</button>
+            <h1 className="headline">£ Hello, World! £</h1>
+            </div>}
           </div>
           <Router>
             <Routes>
-              <Route exact path="/" element={< Home user={users[0]} setUsers={setUsers} />} />
-              <Route path="/Quiz" element={<QuizComponent />} />
+              <Route path="/" element={loggedIn ? <HomePage /> : <Login loggedIn={loggedIn} users={users} setUsers={setUsers} setSelectedUser={setSelectedUser} selectedUser={selectedUser} />} />
+              <Route path="/countries" element={<CountryContainer user={selectedUser} />} />
+              <Route path="/quiz" element={<QuizComponent />} />
               <Route path="/map" element={<Map countries={countries} />} />
-              <Route path="/Singalong" element={<Video />} />
+              <Route path="/singalong" element={<Video />} />
+            </Routes>
+          </Router>
+        </div> :
+
+        <div id="cloud-intro-stop">
+          <div className="background-button-container">
+            <button className="button-style" onClick={toggleBackground}>Start Clouds</button>
+            <h1 className="headline">£ Hello, World! £</h1>
+            {loggedIn ?
+              <button className="button-style">Log Out</button> : 
+              <div>
+                <button className="button-style" onClick={toggleBackground}>Stop Clouds</button>
+                <h1 className="headline">£ Hello, World! £</h1>
+              </div>}
+          </div>
+          <Router>
+            <Routes>
+              <Route path="/" element={loggedIn ? <HomePage /> : <Login loggedIn={loggedIn} users={users} setUsers={setUsers} setSelectedUser={setSelectedUser} selectedUser={selectedUser} />} />
+              <Route path="/countries" element={<CountryContainer user={selectedUser} />} />
+              <Route path="/quiz" element={<QuizComponent />} />
+              <Route path="/map" element={<Map countries={countries} />} />
+              <Route path="/singalong" element={<Video />} />
             </Routes>
           </Router>
         </div>}

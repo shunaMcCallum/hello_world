@@ -4,12 +4,12 @@ db.dropDatabase();
 db.users.insertMany([
     {
         "name": "Shuna",
-        "email": "shuna.shuna@shuna.com",
+        "password": "123",
         "countries_studied": []
     },
     {
         "name": "Sushi",
-        "email": "sushi.sushia@meow.com",
+        "password": "123",
         "countries_studied": []
     }
 ])

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Howl } from 'howler';
+import '../styling/PaginationDetail.css';
 
 function PaginationDetail({ country, currentPage }) {
 
