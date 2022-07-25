@@ -13,6 +13,7 @@ Use an API to bring in content or a database to store information.
 Use charts or maps to display your information to the page.
 
 TECHNOLOGIES USED: 
+
 This app was built in ReactJS using JavaScript, JSX and CSS languages. The backend is hosted on a MongoDB database. A custom API transfers the data from the back end to the front end.
 
 RUNNING INSTRUCTIONS
@@ -35,7 +36,8 @@ If your system is unable to run the app, it's possible that you may need to run 
 
 And then run the commands to start the app again.
 
-LESSONS FROM THIS PROJECT: 
+LESSONS FROM THIS PROJECT:
+
 This was the biggest project I have completed to date, and the first full stack app I built as part of a group. 
 The project taught me new skills both in terms of coding and working as part of a team.
 I have embellished the app since finishing the project with my teammates, however the structure and styling were all created by the three of us as a group.
