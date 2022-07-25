@@ -18,7 +18,6 @@ function App() {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [countries, setCountries] = useState([]);
-  // const [selectedCountry, setSelectedCountry] = useState(null);
 
   const loggedIn = window.localStorage.getItem('loggedIn');
 

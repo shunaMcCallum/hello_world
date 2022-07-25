@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
-import UserService from '../services/UserService';
-
-async function loginUser(credentials) {
-    return fetch('http://localhost:9000/api/users/', {
-        method: 'POST',
-        body: JSON.stringify(credentials),
-        headers: { 'Content-Type': 'application/json' }
-    })
-        .then(res => res.json());
-}
 
 
 export default function Login({ users, setSelectedUser, selectedUser, loggedIn }) {
@@ -26,11 +16,23 @@ export default function Login({ users, setSelectedUser, selectedUser, loggedIn }
     const [passwordNotOk, setPasswordNotOk] = useState(false);
 
 
-    const getUser = users.map((user) => {
-        if (user.name === name) {
-            return user
+    async function loginUser(credentials) {
+        return fetch('http://localhost:9000/api/users/', {
+            method: 'POST',
+            body: JSON.stringify(credentials),
+            headers: { 'Content-Type': 'application/json' }
+        })
+            .then(res => res.json());
+    }
+
+
+    const getUser = () => {
+        for (let x of users) {
+            if (x.name === name) {
+                return x;
+            }
         }
-    })
+    }
 
     const checkUserName = () => {
         for (let x of users) {
@@ -60,7 +62,7 @@ export default function Login({ users, setSelectedUser, selectedUser, loggedIn }
         checkPassword();
 
         if (nameOk === true && passwordOk === true) {
-            const thisUser = getUser[0]
+            const thisUser = getUser()
             setSelectedUser(thisUser)
             window.localStorage.setItem('loggedIn', true);
             loggedIn = true;
@@ -84,8 +86,6 @@ export default function Login({ users, setSelectedUser, selectedUser, loggedIn }
         setSignUp(true);
         setButtons(false);
     }
-
-
 
 
     return (
