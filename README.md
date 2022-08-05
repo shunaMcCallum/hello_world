@@ -36,6 +36,8 @@ If your system is unable to run the app, it's possible that you may need to run 
 
 And then run the commands to start the app again.
 
+NOTE: To see the full lesson content on a country, please view Somalia! Other countries are shown only for demonstration purposes.
+
 LESSONS FROM THIS PROJECT:
 
 This was the biggest project I have completed to date, and the first full stack app I built as part of a group. 
