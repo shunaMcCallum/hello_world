@@ -1,5 +1,9 @@
 # Hello World!
 
+<p align="center">
+<img src="client/src/images/flag_page_top.png" width="500">
+</p>
+
 ## Project Brief
 The BBC are looking to improve their online offering of educational content by developing some interactive browser applications that display information in a fun and interesting way. Your task is to make an a Minimum Viable Product or prototype to put forward to them - this may only be for a small set of information, and may only showcase some of the features to be included in the final app.
 
@@ -46,4 +50,4 @@ And then run the commands to start the app again.
 NOTE: To see the full lesson content on a country, please view Mexico! Other countries are shown only for demonstration purposes.
 
 ## App Demo
-
+<video src="https://user-images.githubusercontent.com/103276344/188515715-62cc4345-5c7e-451a-b27b-aec02d9b0fdd.mp4" width="500px"></video>
