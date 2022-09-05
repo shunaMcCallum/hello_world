@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Hello World!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Brief
+The BBC are looking to improve their online offering of educational content by developing some interactive browser applications that display information in a fun and interesting way. Your task is to make an a Minimum Viable Product or prototype to put forward to them - this may only be for a small set of information, and may only showcase some of the features to be included in the final app.
 
-## Available Scripts
+MVP: <br/>
+A user should be able to:
 
-In the project directory, you can run:
+view some educational content on a particular topic
+be able to interact with the page to move through different sections of content
 
-### `npm start`
+EXTENSIONS: <br/>
+Use an API to bring in content or a database to store information.
+Use charts or maps to display your information to the page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This app was built in ReactJS using JavaScript, JSX and CSS languages. The backend is hosted on a MongoDB database. A custom API transfers the data from the back end to the front end.
 
-### `npm test`
+## Lessons from this Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This was the biggest project I had completed to date, and the first full stack app I built as part of a group. 
+This app taught me a lot about data storage, passing data from the back to the front end of an app, many powerful functions that React can offer, and it developed my CSS skills - I can now centre a div!
+I really enjoyed working as part of a team and getting to focus on building particular components as we were able to share coding the main app and get it up and running very quickly. We then had plenty of time to build out further components from there.
 
-### `npm run build`
+## Running Instructions
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run this app, clone the git repository. You will need to have MongoDB installed in order to run the app's database.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open up the terminal and open two tabs.
+In the first tab, cd into the app's server folder and run npm install. Then run npm run seeds.
+In the second tab, cd into the client folder and run npm install.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will install the relevant dependencies require to run the app to your system. Npm run seeds will seed the MondoDB database.
 
-### `npm run eject`
+Next, to open the app:
+In server, run npm run server:dev
+In client, run npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This will run both the back and front ends of the app and open it in a new tab in your web browser at localhost:3000.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If your system is unable to run the app, it's possible that you may need to run an update, so run this command in the terminal in both the server and client folders: npm update
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+And then run the commands to start the app again.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+NOTE: To see the full lesson content on a country, please view Mexico! Other countries are shown only for demonstration purposes.
 
-## Learn More
+## App Demo
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
