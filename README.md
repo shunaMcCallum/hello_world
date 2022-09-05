@@ -1,7 +1,7 @@
 # Hello World!
 
 <p align="center">
-<img src="client/src/images/flag_page_top.png" width="500">
+<img src="client/src/images/flag_page_top.png" width="700">
 </p>
 
 ## Project Brief
@@ -50,4 +50,4 @@ And then run the commands to start the app again.
 NOTE: To see the full lesson content on a country, please view Mexico! Other countries are shown only for demonstration purposes.
 
 ## App Demo
-<video src="https://user-images.githubusercontent.com/103276344/188515715-62cc4345-5c7e-451a-b27b-aec02d9b0fdd.mp4" width="500px"></video>
+<video src="https://user-images.githubusercontent.com/103276344/188517900-4ddcdcf8-1871-41e5-ac81-1f2c448174b9.mp4" width="500px"></video>
