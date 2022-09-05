@@ -50,4 +50,4 @@ And then run the commands to start the app again.
 NOTE: To see the full lesson content on a country, please view Mexico! Other countries are shown only for demonstration purposes.
 
 ## App Demo
-<video src="https://user-images.githubusercontent.com/103276344/188517900-4ddcdcf8-1871-41e5-ac81-1f2c448174b9.mp4" width="500px"></video>
+<video src="https://user-images.githubusercontent.com/103276344/188518620-56e5f525-e7df-469f-85a4-c97b6a77e10a.mp4" width="500px"></video>
